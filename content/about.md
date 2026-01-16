@@ -1,0 +1,7 @@
+**ABOUT**
+
+Nova Media Studio is a multidisciplinary duo founded in 2024 through the collaboration of <a href="https://www.tampueduard.com/about" target="_blank">Eduard Tampu</a> and <a href="https://www.federicasorba.art/contact" target="_blank">Federica Sorba</a>. By combining audio and video media, their goal is to create immersive experiences across different contexts, ranging from live performance to audiovisual installations. Born from an exploration of the sonic dimension through the visual one, their approach goes far beyond the simple fusion of these two media, instead investigating the use of space as a cornerstone in the non-linear narrative that defines their work.
+
+Through experimentation with projection mapping, they have sought to mediate visual content through architectural space, proposing a narrative that moves away from the alienation of the screen. In doing so, they enhance the intrinsic nature of space itself, amplifying its sense of stillness and identity.
+
+Nova Media has collaborated with various artists and cultural institutions, including: Iosonouncane & Daniela Pes, Gio Evan, Fabrique Milano, GAM Torino, Club Silencio, Recontemporary, Reggia di Venaria, OGR, Seminaria Sogni in Terra, and Artico Club. 

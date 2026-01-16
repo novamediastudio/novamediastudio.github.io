@@ -1,0 +1,6 @@
+The work for Seminaria 2025 is a dialogue between inside and outside, between the need for protection and the desire for (re)connection. It offers itself as a mirror of a collective memory, made of distant echoes, temporarily detached from the outside world. Through sound and projection — Tempo Organico — it speaks to the need for a slower pace: to (re)connect with people, places, and traditions that contemporary techno-utopia tends to dissolve.
+
+The projection on one of the three towers of Maranola becomes a vehicle for this (re)connection with matter: not a screen, but the archaic element on which the village was built — stone. Our resonances with these spaces, expressed through sound and image, accompany the path along the high walls that separate us from urban chaos.
+The slow and introspective rhythm of the narration reflects the cyclic nature of daily gestures, their simplicity, and guides both sight and hearing toward the details that can only be perceived in contexts like this one.
+
+The work invites us to experience this (re)connection as a passage: from the inside to the outside, from the embrace of the walls to the fabric of the landscape, highlighting the harmonic elements of the territory and its homogeneity, in contrast to the visual and acoustic disorder of the outside world.

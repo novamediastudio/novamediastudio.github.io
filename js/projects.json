@@ -1,0 +1,207 @@
+[
+    {
+        "id": "workshop",
+        "title": "Recontemporary Workshop",
+        "year": "2025",
+        "month": "12",
+        "type": "Workshop",
+        "typeDetails": "Three Days of Video Mapping",
+        "place": "Recontemporary <br> (Turin, IT)",
+        "contentFile": "",
+        "mainMedia": [
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_10.mp4",
+                "controls": false
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_1.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_2.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_3.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_4.mp4"            
+            },              
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_5.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_6.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_7.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_8.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_9.jpg"
+            },            
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_10.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_11.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_12.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_workshop/novamedia_workshop_13.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_workshop/novamedia_workshop_14.mp4"
+            }
+        ]
+    },
+    {
+        "id": "c2cfestival",
+        "title": "Iosonouncane & Daniela Pes",
+        "year": "2025",
+        "month": "10",
+        "type": "Media and Camera Operator | Live VFX",
+        "typeDetails": "",
+        "place": "C2C Festival <br> (Turin, IT)",
+        "contentFile": "content/iscupes.md",
+        "mainMedia": [
+            {
+                "type": "image",
+                "src": "images/2025_c2c/novamedia_main_isuc.jpg",
+                "credits": "Picture by Piera Masala",
+                "link": "https://www.instagram.com/pieramasala_/"
+            }
+        ],
+        "media": [
+            {
+                "type": "video",
+                "src": "images/2025_c2c/novamedia_isucpes_1.mp4"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_c2c/novamedia_isucpes_2.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_c2c/novamedia_isucpes_3.jpg",
+                "credits": "Picture by Piera Masala",
+                "link": "https://www.instagram.com/pieramasala_/"
+            },            
+            {
+                "type": "image",
+                "src": "images/2025_c2c/novamedia_isucpes_4.jpg",
+                "credits": "Picture by Piera Masala",
+                "link": "https://www.instagram.com/pieramasala_/"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_c2c/novamedia_isucpes_5.mp4"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_c2c/novamedia_isucpes_6.mp4"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_c2c/novamedia_isucpes_8.mp4"
+            }
+        ]
+    },
+    {
+        "id": "gioevan",
+        "title": "Gio Evan",
+        "type": "Content Design",
+        "typeDetails": "",
+        "year": "2025",
+        "month": "10",
+        "place": "L'Affine del Mondo Tour | Italian Tour",
+        "contentFile": "content/audiovisualperformance.md",
+        "mainMedia": [
+            {
+                "type": "video",
+                "src": "images/2024_audiovisualperformance/novamedia_live_1.mp4"
+            }
+        ],
+        "media": [
+            {
+                "type": "video",
+                "src": "images/2024_audiovisualperformance/novamedia_live_1.mp4"
+            },
+            {
+                "type": "video",
+                "src": "images/2024_audiovisualperformance/novamedia_live_2.mp4"
+            },
+            {
+                "type": "video",
+                "src": "images/2024_audiovisualperformance/novamedia_live_3.mp4"
+            }
+        ]
+    },
+    {
+        "id": "tempoorganico",
+        "title": "Tempo Organico",
+        "type": "A/V Installation",
+        "typeDetails": "Environmental Art Biennal Festival",
+        "year": "2025",
+        "month": "8",
+        "place": "Seminaria Sogni in Terra <br> (Maranola, IT)",
+        "contentFile": "content/tempoorganico.md",
+        "mainMedia": [
+            {
+                "type": "video",
+                "src": "images/2025_tempoorganico/novamedia_seminaria.mp4",
+                "controls": true
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_1.jpg",
+                "credits": "Photo by Nova Media"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_2.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_3.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_4.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_5.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_6.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_tempoorganico/novamedia_seminaria.mp4"
+            }
+        ]
+    }
+]
