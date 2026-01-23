@@ -677,8 +677,8 @@ video {
 
 .info-content {
   position: absolute;
-  padding-top: 25vh;
-  padding-left: 43%;
+  padding-top: 20vh;
+  padding-left: 20%;
   width: 100%;
   z-index: -1;
 }
@@ -727,6 +727,7 @@ video {
   border-bottom: 1px solid #ffffff;
   padding-bottom: 0.5rem;
   font-weight: 400;
+  scroll-margin-top: 15vh;
 }
 
 #calendar h4,
@@ -929,13 +930,38 @@ video {
     width: 90%;
     margin: auto;
     margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
+    padding: 0%;
+  }
+
+  #press {
+    padding-bottom: 10vh;
   }
 
   #calendar li,
   #press li {
     flex-direction: column;
     gap: 0.2rem;
+  }
+
+  #calendar h3,
+  #press h3 {
+  font-size: 2.8vh;
+  text-transform: uppercase;
+  margin-top: 2.8vh;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  }
+
+  #calendar h4,
+  #press h4 {
+    font-size: 1.8vh;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
   }
 
   #calendar .date,

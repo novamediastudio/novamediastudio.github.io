@@ -18,6 +18,6 @@
 
 Workshops 
 
-2026/05/10 • 2026/05/12 Projection Mapping
+2026/05/10 • 2026/05/12 TBA
 2025/12/06 • 2025/12/08 Projection Mapping Workshop at Recontemporary – Turin (IT)
 2025/05/10 • 2025/05/11 Projection Mapping Workshop at Recontemporary – Turin (IT)

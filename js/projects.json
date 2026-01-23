@@ -7,7 +7,7 @@
         "type": "Workshop",
         "typeDetails": "Three Days of Video Mapping",
         "place": "Recontemporary <br> (Turin, IT)",
-        "contentFile": "",
+        "contentFile": "content/workshop.md",
         "mainMedia": [
             {
                 "type": "video",
@@ -134,25 +134,49 @@
         "year": "2025",
         "month": "10",
         "place": "L'Affine del Mondo Tour | Italian Tour",
-        "contentFile": "content/audiovisualperformance.md",
+        "contentFile": "content/gioevan.md",
         "mainMedia": [
             {
-                "type": "video",
-                "src": "images/2024_audiovisualperformance/novamedia_live_1.mp4"
+                "type": "image",
+                "src": "images/2025_gioevan/novamedia_gioevan_3.jpg"
             }
         ],
         "media": [
             {
-                "type": "video",
-                "src": "images/2024_audiovisualperformance/novamedia_live_1.mp4"
+                "type": "image",
+                "src": "images/2025_gioevan/novamedia_gioevan_1.jpg"
             },
             {
                 "type": "video",
-                "src": "images/2024_audiovisualperformance/novamedia_live_2.mp4"
+                "src": "images/2025_gioevan/novamedia_gioevan_2.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_gioevan/novamedia_gioevan_3.jpg"
+            },            
+            {
+                "type": "video",
+                "src": "images/2025_gioevan/novamedia_gioevan_4.mp4"
             },
             {
                 "type": "video",
-                "src": "images/2024_audiovisualperformance/novamedia_live_3.mp4"
+                "src": "images/2025_gioevan/novamedia_gioevan_5.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_gioevan/novamedia_gioevan_6.png"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_gioevan/novamedia_gioevan_7.mp4"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_gioevan/novamedia_gioevan_8.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_gioevan/novamedia_gioevan_9.jpg"
             }
         ]
     },
@@ -201,6 +225,140 @@
             {
                 "type": "video",
                 "src": "images/2025_tempoorganico/novamedia_seminaria.mp4"
+            }
+        ]
+    },
+    {
+        "id": "gam",
+        "title": "GAM",
+        "type": "A/V Performance",
+        "typeDetails": "Club Silencio",
+        "year": "2025",
+        "month": "5",
+        "place": "Gallery of Modern and Contemporary Art <br> (Turin, IT)",
+        "contentFile": "content/gam.md",
+        "mainMedia": [
+            {
+                "type": "image",
+                "src": "images/2025_gam/novamedia_gam_1.jpg"
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2025_gam/novamedia_gam_4.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_gam/novamedia_gam_2.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_gam/novamedia_gam_3.jpg"
+            },            {
+                "type": "image",
+                "src": "images/2025_gam/novamedia_gam_1.jpg"
+            }
+        ]
+    },
+    {
+        "id": "venaria",
+        "title": "Dreaming",
+        "type": "Projection Mapping",
+        "typeDetails": "Club Silencio",
+        "year": "2024",
+        "month": "7",
+        "place": "Reggia di Venaria <br> (Turin, IT)",
+        "contentFile": "content/venaria.md",
+        "mainMedia": [
+            {
+                "type": "video",
+                "src": "images/2024_venaria/novamedia_venaria.mp4",
+                "credits": "Footage by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            }
+        ],
+        "media": [            
+            {
+                "type": "image",
+                "src": "images/2024_venaria/novamedia_venaria_1.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_venaria/novamedia_venaria_2.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_venaria/novamedia_venaria_3.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_venaria/novamedia_venaria_4.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            }
+        ]
+    },
+    {
+        "id": "ogr",
+        "title": "Beyond the Portal",
+        "type": "A/V Installation",
+        "typeDetails": "ROOM x Club Silencio",
+        "year": "2024",
+        "month": "5",
+        "place": "OGR <br> (Turin, IT)",
+        "contentFile": "content/ogr.md",
+        "mainMedia": [
+            {
+                "type": "video",
+                "src": "images/2024_ogr/novamedia_ogr.mp4",
+                "credits": "Video by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/",
+                "controls": true
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr_1.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr_2.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {            
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr_3.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr_4.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr_5.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr_6.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
             }
         ]
     }

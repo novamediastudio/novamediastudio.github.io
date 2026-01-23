@@ -1,0 +1,3 @@
+NOVA presented a Live A/V performance for "A night at GAM", hosted by the GAM - Turin Civic Gallery of Modern and Contemporary Art. Taking place during a special after-hours opening, the performance featured an alternation of live performed pieces and a curated musical selection, along live visuals projected on the facade of the museum. The event merged the atmosphere of "night life" and the textures of ambient and electronic music with the prestigious art collection exhibited within the museum.
+
+(Event Details)[https://clubsilencio.it/eventi/una-notte-alla-gam-4/]

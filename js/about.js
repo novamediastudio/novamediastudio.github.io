@@ -13,12 +13,8 @@ fetch('content/press.md')
     .then(response => response.text())
     .then(markdown => {
         const lines = markdown.split('\n');
-        let html = '';
+        let html = '<h3>Press</h3>';
         let inList = false;
-
-        // Regex to match dates at the start of the line
-        const datePart = '\\d{4}(?:[./-]\\d{1,2})?(?:[./-]\\d{1,2})?';
-        const singleRegex = new RegExp(`^\\s*(${datePart})`);
 
         lines.forEach(line => {
             line = line.trim();
@@ -38,20 +34,10 @@ fetch('content/press.md')
                     inList = true;
                 }
 
-                let dateStr = '';
-                let content = line;
-                const match = line.match(singleRegex);
-                if (match) {
-                    dateStr = match[1];
-                    // Remove date and separators to get the content
-                    content = line.replace(singleRegex, '').replace(/^[\*\-]\s+/, '').replace(/^[,.\-\|]\s+/, '').trim();
-                } else {
-                    // Clean up bullet points if no date found
-                    content = line.replace(/^[\*\-]\s+/, '').trim();
-                }
+                // Clean up bullet points
+                const content = line.replace(/^[\*\-]\s+/, '').trim();
 
                 html += `<li>
-                    <span class="date">${dateStr}</span>
                     <span class="event">${marked.parseInline ? marked.parseInline(content) : content}</span>
                 </li>`;
             }
@@ -196,7 +182,8 @@ fetch('content/calendar.md')
             if (upcoming.length === 0 && past.length === 0) return;
 
             if (section.title) {
-                html += `<h3>${section.title}</h3>`;
+                const sectionId = section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                html += `<h3 id="${sectionId}">${section.title}</h3>`;
             }
 
             if (upcoming.length > 0) {
@@ -211,6 +198,12 @@ fetch('content/calendar.md')
         if (html === '') html = marked.parse(markdown);
 
         document.getElementById('calendar').innerHTML = html;
+
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            const el = document.getElementById(hash);
+            if (el) el.scrollIntoView();
+        }
     })
     .catch(error => {
         console.error('Error loading Markdown file:', error);

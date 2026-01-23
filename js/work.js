@@ -390,6 +390,7 @@ function openModal(index, type) {
             updateModalContent();
         } else if (event.key === 'Escape') {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
             modal.remove(); // Remove modal from DOM
             modalVideo.pause(); // Pause the video when closing the modal
             window.removeEventListener('keydown', handleKeydown); // Remove event listener

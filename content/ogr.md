@@ -1,0 +1,7 @@
+Beyond the Portal is an immersive audiovisual installation conceived and produced for the Duomo Hall of OGR Torino in collaboration with <a href="https://www.instagram.com/roomwashere/" target="_blank" style="text-decoration: underline;">ROOM</a>. The hall’s vast industrial architecture, with its towering walls and distinctive crescent-shaped curvature, became both the canvas and collaborator for the installation’s visual narrative. Drawing on the theme of the beyond and the concept of passage, Beyond the Portal reimagines the Duomo Hall as a liminal space — a threshold between realms of perception. Through site-specific projection mapping, the architecture was transformed into a dynamic, virtual non-portal: an ephemeral yet powerful gateway that challenges the boundaries between physical structure and digital expression.
+
+## **Credits**:
+Visual Design | Nova Media Studio <br>
+Light Design | <a href="ttps://www.instagram.com/momiji__studio/" target="_blank" style="text-decoration: underline;">Momiji Studio</a> <br>
+Music | <a href="https://www.instagram.com/pigallemusic/" target="_blank" style="text-decoration: underline;">Pigalle</a> <br>
+Photography and Videography | <a href="https://www.instagram.com/dentrooallascatola/" target="_blank" style="text-decoration: underline;">Simone Coppola</a> <br>
