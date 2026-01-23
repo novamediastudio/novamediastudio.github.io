@@ -2,6 +2,6 @@ Beyond the Portal is an immersive audiovisual installation conceived and produce
 
 ## **Credits**:
 Visual Design | Nova Media Studio <br>
-Light Design | <a href="ttps://www.instagram.com/momiji__studio/" target="_blank" style="text-decoration: underline;">Momiji Studio</a> <br>
+Light Design | <a href="https://www.instagram.com/momiji__studio/" target="_blank" style="text-decoration: underline;">Momiji Studio</a> <br>
 Music | <a href="https://www.instagram.com/pigallemusic/" target="_blank" style="text-decoration: underline;">Pigalle</a> <br>
 Photography and Videography | <a href="https://www.instagram.com/dentrooallascatola/" target="_blank" style="text-decoration: underline;">Simone Coppola</a> <br>
