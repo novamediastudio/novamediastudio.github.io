@@ -119,7 +119,7 @@ function startSlideshow(index) {
       } else if (item.type === 'video' && !item.src.includes("drive.google.com")) {
         const fileExtension = item.src.split('.').pop();
         const mimeType = fileExtension === 'webm' ? 'video/webm' : 'video/mp4';
-        gallery.innerHTML = `<video autoplay muted class="active">
+        gallery.innerHTML = `<video autoplay muted loop playsinline class="active">
       <source src="${item.src}" type="${mimeType}">
       Your browser does not support the video tag.
     </video>${creditsHtml}`;
@@ -195,6 +195,13 @@ document.addEventListener('DOMContentLoaded', function () {
   let images = [];
   let slideshowInterval;
 
+  function showRandomImage() {
+    if (images.length > 0) {
+      const currentIndex = Math.floor(Math.random() * images.length);
+      imageGallery.innerHTML = `<img src="${images[currentIndex]}" alt="Slideshow Image" class="active">`;
+    }
+  }
+
   // Fetch projects data and store image paths in an array
   fetch('js/projects.json')
     .then(response => response.json())
@@ -209,13 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Start the slideshow
       if (images.length > 0) {
-        let currentIndex = 0;
-
-        function showRandomImage() {
-          currentIndex = Math.floor(Math.random() * images.length);
-          imageGallery.innerHTML = `<img src="${images[currentIndex]}" alt="Slideshow Image" class="active">`;
-        }
-
         // Show the first random image
         showRandomImage();
 
@@ -244,7 +244,8 @@ document.addEventListener('DOMContentLoaded', function () {
     projectList.addEventListener('mouseout', function (event) {
       if (event.target.closest('.sidebar-item')) {
         // Optionally, you can restart the slideshow when the mouse leaves the project
-        // slideshowInterval = setInterval(showRandomImage, 3000);
+        showRandomImage();
+        slideshowInterval = setInterval(showRandomImage, 3000);
       }
     });
   }
@@ -274,8 +275,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize cursor position
   moveCursor(-10, -10);
+  cursor.style.opacity = '0'; // Start hidden
+
   document.addEventListener('mousemove', (e) => {
+    cursor.style.opacity = '1';
     moveCursor(e.clientX, e.clientY); 
+  });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.tagName === 'IFRAME') {
+      cursor.style.opacity = '0';
+    }
   });
 
   document.addEventListener('mousedown', () => {
@@ -334,4 +348,122 @@ document.addEventListener('DOMContentLoaded', function () {
       }, holdTime);
     }
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const landingOverlay = document.getElementById('landing-overlay');
+  const enterBtn = document.getElementById('enter-site');
+  let isLandingVisible = true;
+  let scrollYAccumulator = 0;
+  const thresholdRatio = 0.4;
+
+  // Force video autoplay for iOS/Safari
+  const bgVideo = document.querySelector('.landing-video-background video');
+  if (bgVideo) {
+    bgVideo.muted = true;
+    bgVideo.play().catch(e => console.log("Autoplay failed:", e));
+  }
+
+  if (landingOverlay) {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('skip') === 'true') {
+      landingOverlay.style.display = 'none';
+      document.body.style.overflow = 'hidden';
+      isLandingVisible = false;
+      
+      const landingLogo = document.querySelector('.landing-logo');
+      if (landingLogo) landingLogo.style.display = 'none';
+    }
+  }
+
+  function hideLanding() {
+    if (!isLandingVisible) return;
+    isLandingVisible = false;
+    
+    // Slide out the landing page
+    landingOverlay.style.transition = 'transform 1s ease-in-out';
+    landingOverlay.style.transform = 'translateY(-100%)';
+    landingOverlay.classList.add('slide-out');
+    
+    // Enable scrolling on the body after transition
+    setTimeout(() => {
+      document.body.style.overflow = 'hidden';
+      // Optional: Pause video to save resources
+      const video = landingOverlay.querySelector('video');
+      if(video) video.pause();
+
+      const landingLogo = document.querySelector('.landing-logo');
+      if (landingLogo) landingLogo.style.display = 'none';
+    }, 1000); // Match transition duration
+  }
+
+  if (landingOverlay && enterBtn) {
+    // Click event
+    enterBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      hideLanding();
+    });
+
+    // Scroll event (Mouse wheel)
+    let wheelTimeout;
+    window.addEventListener('wheel', function(e) {
+      if (!isLandingVisible) return;
+      
+      scrollYAccumulator += e.deltaY;
+      if (scrollYAccumulator < 0) scrollYAccumulator = 0;
+      
+      const windowHeight = window.innerHeight;
+      
+      landingOverlay.style.transition = 'none';
+      landingOverlay.style.transform = `translateY(-${scrollYAccumulator}px)`;
+
+      if (scrollYAccumulator > windowHeight * thresholdRatio) {
+        hideLanding();
+      } else {
+        clearTimeout(wheelTimeout);
+        wheelTimeout = setTimeout(() => {
+          if (isLandingVisible && scrollYAccumulator <= windowHeight * thresholdRatio) {
+            landingOverlay.style.transition = 'transform 0.5s ease-out';
+            landingOverlay.style.transform = 'translateY(0)';
+            scrollYAccumulator = 0;
+          }
+        }, 150);
+      }
+    }, { passive: false });
+
+    // Touch event (Swipe up)
+    let touchStartY = 0;
+    window.addEventListener('touchstart', e => {
+        if (isLandingVisible) touchStartY = e.touches[0].clientY;
+    }, { passive: false });
+
+    window.addEventListener('touchmove', e => {
+      if (!isLandingVisible) return;
+      
+      const currentTouchY = e.touches[0].clientY;
+      const deltaY = touchStartY - currentTouchY;
+      touchStartY = currentTouchY;
+
+      scrollYAccumulator += deltaY;
+      if (scrollYAccumulator < 0) scrollYAccumulator = 0;
+
+      const windowHeight = window.innerHeight;
+      landingOverlay.style.transition = 'none';
+      landingOverlay.style.transform = `translateY(-${scrollYAccumulator}px)`;
+
+      if (scrollYAccumulator > windowHeight * thresholdRatio) {
+        hideLanding();
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchend', () => {
+        if (!isLandingVisible) return;
+        const windowHeight = window.innerHeight;
+        if (scrollYAccumulator <= windowHeight * thresholdRatio) {
+            landingOverlay.style.transition = 'transform 0.5s ease-out';
+            landingOverlay.style.transform = 'translateY(0)';
+            scrollYAccumulator = 0;
+        }
+    });
+  }
 });

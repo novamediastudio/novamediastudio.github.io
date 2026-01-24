@@ -133,8 +133,9 @@ fetch('js/projects.json')
                     const video = document.createElement('video');
                     video.src = mainMedia.src;
                     video.playsInline = true; // Ensure inline playback on mobile
+                    video.setAttribute('playsinline', '');
                     video.loop = true;
-                    video.muted = mainMedia.muted;
+                    video.muted = (mainMedia.muted !== undefined) ? mainMedia.muted : true;
                     video.volume = 0.2;
                     video.controls = mainMedia.controls;
                     video.autoplay = true;
@@ -237,6 +238,7 @@ fetch('js/projects.json')
                         mediaElement.muted = true;
                         mediaElement.autoplay = true;
                         mediaElement.playsInline = true;
+                        mediaElement.setAttribute('playsinline', '');
                         mediaElement.addEventListener('click', () => {
                             openModal(index, 'video');
                         });
@@ -515,8 +517,20 @@ document.addEventListener('DOMContentLoaded', () => {
     cursor.style.left = x + 'px';
     cursor.style.top = y + 'px';
   }
+  
   document.addEventListener('mousemove', (e) => {
+    cursor.style.opacity = '1';
     moveCursor(e.clientX, e.clientY); 
+  });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.tagName === 'IFRAME') {
+      cursor.style.opacity = '0';
+    }
   });
 
   document.addEventListener('mousedown', () => {

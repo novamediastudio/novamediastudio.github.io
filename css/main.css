@@ -5,7 +5,6 @@
 
 html,
 body {
-  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -16,9 +15,6 @@ body {
   height: 100vh;
   cursor: none !important;
   background-color: #000000;
-  /* mix-blend-mode: difference; */
-  /* background-color: #073d7a; */
-  /* background-color: hsl(216, 81%, 12%); */
 }
 
 body {
@@ -42,7 +38,7 @@ a {
 
 .custom-cursor {
   position: fixed;
-  z-index: 9999; 
+  z-index: 10002; 
   width: 15px;
   height: 15px;
   background-color: #db3a3a;
@@ -51,8 +47,13 @@ a {
     -50%,
     -50%
   ); /* Center cursor relative to mouse coordinates */
-  transition: transform 0.1s ease-in-out; /* Smooth cursor movement */
+  transition: transform 0.1s ease-in-out, opacity 0.2s ease; /* Smooth cursor movement */
   pointer-events: none;
+  opacity: 0;
+}
+
+iframe {
+  cursor: auto !important;
 }
 
 .custom-cursor.pressed {
@@ -129,16 +130,6 @@ video {
 /* Visibility Classes */
 .desktop {
   display: block;
-}
-
-@media only screen and (max-width: 768px) {
-  .desktop {
-    display: none !important;
-  }
-  .mobile {
-    display: block;
-    visibility: visible;
-  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -219,10 +210,10 @@ video {
   overflow: hidden;
   mix-blend-mode: difference;
   font-weight: 500;
+  padding-bottom: 1%;
 }
 
 .sidebar-item {
-  /* margin-top: 5px; */
   width: 100%; /* Adjust the width as needed */
   text-align: left; /* Center the text */
 }
@@ -377,7 +368,6 @@ video {
 }
 
 #main-media-container {
-  /* border: 2px solid red; */
   display: block !important; /* Ensure it's displayed */
   width: 100%;
 }
@@ -490,12 +480,11 @@ video {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  /* background-color: rgb(0,0,0);  */
   background-color: rgba(0,0,0,0.9);
   display: flex; /* Use Flexbox to center content */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  z-index: 2;
+  z-index: 100;
 }
 
 .modal-content {
@@ -506,7 +495,6 @@ video {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   background-color: #000000;
-  /* border: #cccccc 2px solid; */
   padding: 30px;
   box-sizing: border-box; /* Include padding in width and height */
   position: relative;
@@ -547,7 +535,6 @@ video {
 }
 
 .modal-focus {
-  /* color: #fffbfb; */
   text-decoration: overline;
 }
 
@@ -563,7 +550,6 @@ video {
 
 .close {
   position: fixed;
-  /* margin-bottom: 1.5vh; */
   bottom: 7vh;
   right: 2%;
   z-index: 5;
@@ -605,10 +591,6 @@ video {
 .arrow.right {
   right: -150px;
 }
-
-/* iframe {
-  padding: 5%;
-} */
 
 #next-project-container {
   font-size: 1.2rem;
@@ -766,8 +748,101 @@ video {
   flex: 1;
 }
 
+/* --- Landing Page --- */
+.landing-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.landing-logo {
+  position: fixed;
+  top: 5vh;
+  left: 2%;
+  height: 3vh;
+  width: auto;
+  z-index: 10001;
+}
+
+.landing-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 5vh;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.enter-link {
+  font-size: 1.8vw;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  padding: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  bottom: 2vh;
+}
+
+.enter-link:hover {
+  background-color: transparent;
+  color: #db3a3a;
+  transform: translateY(10px);
+}
+
+.landing-video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.landing-video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.landing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#landing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: #000;
+  transition: transform 1s ease-in-out;
+}
+
+#landing-overlay.slide-out {
+  transform: translateY(-100%);
+}
+
 /* --- Mobile Responsive Overrides --- */
 @media (max-width: 768px) {
+  .desktop { display: none !important; }
+  .mobile { display: block; visibility: visible; }
+
   body {
     font-size: 2.3vh; /* Adjusts size relative to viewport width */
   }
@@ -1008,5 +1083,21 @@ video {
   .custom-cursor {
     display: none; 
   } 
-
-} 
+  
+  /* Landing Page Mobile */
+  .landing-logo {
+    width: auto;
+    height: 3vh;
+  }
+  .landing-text {
+    font-size: 2.3vh;
+    font-weight: 400;
+    padding: 5vh;
+  }
+  .enter-link {
+    position: relative;
+    top: 10vh;
+    font-weight: 400;
+    font-size: 2.8vh;
+  }
+}
