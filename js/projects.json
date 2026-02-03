@@ -187,7 +187,7 @@
         "typeDetails": "Environmental Art Biennal Festival",
         "year": "2025",
         "month": "8",
-        "place": "Seminaria Sogni in Terra <br> (Maranola, IT)",
+        "place": "Seminaria Sogninterra <br> (Maranola, IT)",
         "contentFile": "content/tempoorganico.md",
         "mainMedia": [
             {
@@ -199,32 +199,44 @@
         "media": [
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_1.jpg",
-                "credits": "Photo by Nova Media"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_1.jpg"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_2.jpg"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_2.jpg",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_3.jpg"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_3.jpg",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
+                
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_4.jpg"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_4.jpg",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_5.jpg"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_5.jpg",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_6.jpg"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_6.jpg",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "video",
-                "src": "images/2025_tempoorganico/novamedia_seminaria.mp4"
+                "src": "images/2025_tempoorganico/novamedia_seminaria.mp4",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             }
         ]
     },

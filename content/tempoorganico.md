@@ -1,6 +1,10 @@
-The work for Seminaria 2025 is a dialogue between inside and outside, between the need for protection and the desire for (re)connection. It offers itself as a mirror of a collective memory, made of distant echoes, temporarily detached from the outside world. Through sound and projection — Tempo Organico — it speaks to the need for a slower pace: to (re)connect with people, places, and traditions that contemporary techno-utopia tends to dissolve.
+The work for <a href="https://www.seminariasogninterra.it" target="_blank" style="text-decoration: underline;">Seminaria</a> 2025 is a dialogue between inside and outside, between the need for protection and the desire for (re)connection. It offers itself as a mirror of a collective memory, made of distant echoes, temporarily detached from the outside world. Through sound and projection — Tempo Organico — it speaks to the need for a slower pace: to (re)connect with people, places, and traditions that contemporary techno-utopia tends to dissolve.
 
 The projection on one of the three towers of Maranola becomes a vehicle for this (re)connection with matter: not a screen, but the archaic element on which the village was built — stone. Our resonances with these spaces, expressed through sound and image, accompany the path along the high walls that separate us from urban chaos.
 The slow and introspective rhythm of the narration reflects the cyclic nature of daily gestures, their simplicity, and guides both sight and hearing toward the details that can only be perceived in contexts like this one.
 
 The work invites us to experience this (re)connection as a passage: from the inside to the outside, from the embrace of the walls to the fabric of the landscape, highlighting the harmonic elements of the territory and its homogeneity, in contrast to the visual and acoustic disorder of the outside world.
+
+During the last day of the three day exhibition we had also the pleasure to present a live audio/visual performance that can be found below. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qwpu_4n-4nU?si=e0ir4L9Xtw7lWwUO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
