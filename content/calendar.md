@@ -1,6 +1,7 @@
 **Exhibitions / Festivals**
 
-2025/10/31 Live Visual per Iosonouncane / Daniela Pes – Club2Club (TO) •
+2026/02/06 • 2026/02/08 Exhibition "Soglie di movimento" with Torino Creativa - Spazio Baôm, Turin (IT)
+2025/10/31 Live Visual per Iosonouncane / Daniela Pes – Club2Club, Turin (IT) 
 2025/10/28 • 2025/12/13, Visuals per Gio Evan Gio Evan – L'Affine del Mondo Italian Tour
 2025/10/11 Installation Beyond the Portal for Barriera Design District -  Magazzini Tessili, Turin (IT)
 2025/08/28 • 2025/08/30, Biennale Seminaria Sogninterra, Maranola, Formia (LT), Italy
