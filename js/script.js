@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const enterBtn = document.getElementById('enter-site');
   let isLandingVisible = true;
   let scrollYAccumulator = 0;
-  const thresholdRatio = 0.4;
+  const thresholdRatio = 0.2;
 
   // Force video autoplay for iOS/Safari
   const bgVideo = document.querySelector('.landing-video-background video');
@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (landingOverlay) {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('skip') === 'true') {
+    if (urlParams.get('splash') === 'false') {
       landingOverlay.style.display = 'none';
       document.body.style.overflow = 'hidden';
       isLandingVisible = false;
