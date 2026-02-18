@@ -1,5 +1,6 @@
 **Exhibitions / Festivals**
 
+2026/03/13 • Installation Beyond the Portal – OGR, Turin (IT)
 2026/02/06 • 2026/02/08 Exhibition "Soglie di movimento" with Torino Creativa - Spazio Baôm, Turin (IT)
 2025/10/31 Live Visual per Iosonouncane / Daniela Pes – Club2Club, Turin (IT) 
 2025/10/28 • 2025/12/13, Visuals per Gio Evan Gio Evan – L'Affine del Mondo Italian Tour
