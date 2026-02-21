@@ -1,5 +1,31 @@
 [
     {
+        "id": "angelinoartworks",
+        "title": "Angelino Arworks",
+        "year": "2026",
+        "month": "1",
+        "type": "VFX Animation",
+        "typeDetails": "In collaboration with Nick Ervinck, Angelino Artworks and Spazio Paradiso",
+        "place": "",
+        "contentFile": "content/angelino.md",
+        "mainMedia": [
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_1.jpg"
+            }
+        ]
+    },
+    {
         "id": "workshop",
         "title": "Recontemporary Workshop",
         "year": "2025",

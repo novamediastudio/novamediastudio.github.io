@@ -1,0 +1,6 @@
+A sculptural synthesis between biomorphic nature and synthetic imagination. Born from the collaboration between <a href="https://www.instagram.com/nick_ervinck/" target="_blank" style="text-decoration: underline;">Nick Ervinck</a> – who conceived and developed the project and digital model specifically for this purpose – and Angelino Artworks, which brought his extraordinary vision into physical form, CYRNILOI marks a new and significant milestone in the Belgian artist’s ongoing exploration of the liminal zones where nature, technology and sculptural imagination intertwine and transform.
+
+Video Production: <a href="https://www.instagram.com/spazio__paradiso/" target="_blank" style="text-decoration: underline;">Spazio Paradiso</a> <br>
+VFX Animation: Nova Media Studio
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S-YhUxeERgs?si=f3za-3uIJJFx5iAh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
