@@ -16,12 +16,30 @@
         ],
         "media": [
             {
-                "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+                "type": "video",
+                "src": "images/2026_angelino/novamedia_angelino_3.mp4",
+                "loop": true,
+                "controls": false
             },
             {
                 "type": "image",
                 "src": "images/2026_angelino/novamedia_angelino_1.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_angelino/novamedia_angelino_1.mp4",
+                "controls": false,
+                "loop": true
+            },
+            {
+                "type": "video",
+                "src": "images/2026_angelino/novamedia_angelino_2.mp4",
+                "controls": false,
+                "loop": true
+            },
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
             }
         ]
     },
