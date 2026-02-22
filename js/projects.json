@@ -44,6 +44,70 @@
         ]
     },
     {
+        "id": "torinocreativa",
+        "title": "Specchi",
+        "year": "2026",
+        "month": "1",
+        "type": "Interactive Installation",
+        "typeDetails": "Hosted by Torino Creativa",
+        "place": "Spazio Baom, Torino",
+        "contentFile": "content/torinocreativa.md",
+        "mainMedia": [
+            {
+                "type": "image",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_6.JPG"
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_1.JPG"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_1.mp4",
+                "loop": true,
+                "controls": false
+            },
+            {
+                "type": "image",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_2.JPG"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_5.mp4",
+                "loop": true,
+                "controls": false
+            },
+            {
+                "type": "image",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_3.JPG"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_2.mp4",
+                "loop": true,
+                "controls": false
+            },
+            {
+                "type": "video",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_3.mp4",
+                "loop": true,
+                "controls": false
+            },
+            {
+                "type": "video",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.mp4",
+                "loop": true,
+                "controls": false
+            },
+            {
+                "type": "image",
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.JPG"
+            }
+        ]
+    },
+    {
         "id": "workshop",
         "title": "Recontemporary Workshop",
         "year": "2025",
