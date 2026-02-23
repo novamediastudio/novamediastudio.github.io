@@ -1,7 +1,7 @@
 [
     {
         "id": "angelinoartworks",
-        "title": "Angelino Arworks",
+        "title": "Angelino Artworks",
         "year": "2026",
         "month": "1",
         "type": "VFX Animation",
@@ -50,12 +50,12 @@
         "month": "1",
         "type": "Interactive Installation",
         "typeDetails": "Hosted by Torino Creativa",
-        "place": "Spazio Baom, Torino",
+        "place": "Spazio Baôm, Torino",
         "contentFile": "content/torinocreativa.md",
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_6.JPG"
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.JPG"
             }
         ],
         "media": [
@@ -66,7 +66,6 @@
             {
                 "type": "video",
                 "src": "images/2026_torinocreativa/novamedia_torinocreativa_1.mp4",
-                "loop": true,
                 "controls": false
             },
             {
@@ -75,8 +74,7 @@
             },
             {
                 "type": "video",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_5.mp4",
-                "loop": true,
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.mp4",
                 "controls": false
             },
             {
@@ -86,24 +84,12 @@
             {
                 "type": "video",
                 "src": "images/2026_torinocreativa/novamedia_torinocreativa_2.mp4",
-                "loop": true,
                 "controls": false
             },
             {
                 "type": "video",
                 "src": "images/2026_torinocreativa/novamedia_torinocreativa_3.mp4",
-                "loop": true,
                 "controls": false
-            },
-            {
-                "type": "video",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.mp4",
-                "loop": true,
-                "controls": false
-            },
-            {
-                "type": "image",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.JPG"
             }
         ]
     },
@@ -360,7 +346,7 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_1.jpg"
+                "src": "images/2025_gam/novamedia_gam_6.jpg"
             }
         ],
         "media": [
@@ -369,8 +355,17 @@
                 "src": "images/2025_gam/novamedia_gam_4.jpg"
             },
             {
+                "type": "video",
+                "src": "images/2025_gam/novamedia_gam_1.mp4",
+                "controls": false
+            },
+            {
                 "type": "image",
                 "src": "images/2025_gam/novamedia_gam_2.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_gam/novamedia_gam_1.jpg"
             },
             {
                 "type": "image",
