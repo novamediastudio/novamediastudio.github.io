@@ -94,6 +94,64 @@
         ]
     },
     {
+        "id": "articoclub",
+        "title": "Artico Club",
+        "year": "2026",
+        "month": "1",
+        "type": "Visual Design",
+        "typeDetails": "Hosted by Artico Club",
+        "place": "Teatro Politeama, Bra",
+        "contentFile": "content/artico.md",
+        "mainMedia": [
+            {
+                "type": "image",
+                "src": "images/2026_artico/novamedia_artico_1.jpeg"
+            }
+        ],
+        "media": [
+            {
+                "type": "image",
+                "src": "images/2026_artico/novamedia_artico_9.JPEG"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_artico/novamedia_artico_3.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_artico/novamedia_artico_2.mp4",
+                "controls": false
+            },
+            {
+                "type": "video",
+                "src": "images/2026_artico/novamedia_artico_4.mp4",
+                "controls": false
+            },
+            {
+                "type": "image",
+                "src": "images/2026_artico/novamedia_artico_5.jpg"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_artico/novamedia_artico_7.JPEG"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_artico/novamedia_artico_11.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_artico/novamedia_artico_10.mp4",
+                "controls": false
+            },
+            {
+                "type": "video",
+                "src": "images/2026_artico/novamedia_artico_12.mp4",
+                "controls": false
+            }
+        ]
+    },
+    {
         "id": "workshop",
         "title": "Recontemporary Workshop",
         "year": "2025",
