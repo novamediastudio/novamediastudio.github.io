@@ -1,53 +1,72 @@
 [
     {
-        "id": "angelinoartworks",
-        "title": "Angelino Artworks",
+        "id": "ogr",
+        "title": "Aeterea",
+        "type": "A/V Installation",
+        "typeDetails": "ROOM x Club Silencio",
         "year": "2026",
-        "month": "1",
-        "type": "VFX Animation",
-        "typeDetails": "In collaboration with Nick Ervinck, Angelino Artworks and Spazio Paradiso",
-        "place": "",
-        "contentFile": "content/angelino.md",
+        "month": "3",
+        "place": "OGR <br> (Turin, IT)",
+        "contentFile": "content/ogr26.md",
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+                "src": "images/2026_ogr/novamedia_ogr_1.jpg"
             }
         ],
         "media": [
             {
+               "type": "image",
+                "src": "images/2026_ogr/novamedia_ogr_1.jpg",
+                "credits": "Picture by Federica Sorba",
+                "link": "https://www.instagram.com/federicasorba/"
+            },
+            {
                 "type": "video",
-                "src": "images/2026_angelino/novamedia_angelino_3.mp4",
-                "loop": true,
-                "controls": false
+                "src": "images/2026_ogr/novamedia_ogr_2.mp4"
+            },
+            {            
+                "type": "image",
+                "src": "images/2026_ogr/novamedia_ogr_3.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_1.jpg"
+                "src": "images/2026_ogr/novamedia_ogr_4.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "video",
-                "src": "images/2026_angelino/novamedia_angelino_1.mp4",
-                "controls": false,
-                "loop": true
-            },
-            {
-                "type": "video",
-                "src": "images/2026_angelino/novamedia_angelino_2.mp4",
-                "controls": false,
-                "loop": true
+                "src": "images/2026_ogr/novamedia_ogr_5.mp4"
             },
             {
                 "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+                "src": "images/2026_ogr/novamedia_ogr_6.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+             {
+                "type": "image",
+                "src": "images/2026_ogr/novamedia_ogr_7.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+             {
+                "type": "image",
+                "src": "images/2026_ogr/novamedia_ogr_8.jpg",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
             }
+            
         ]
     },
     {
         "id": "torinocreativa",
         "title": "Specchi",
         "year": "2026",
-        "month": "1",
+        "month": "2",
         "type": "Interactive Installation",
         "typeDetails": "Hosted by Torino Creativa",
         "place": "Spazio Baôm, Torino",
@@ -97,7 +116,7 @@
         "id": "articoclub",
         "title": "Artico Club",
         "year": "2026",
-        "month": "1",
+        "month": "2",
         "type": "Visual Design",
         "typeDetails": "Hosted by Artico Club",
         "place": "Teatro Politeama, Bra",
@@ -148,6 +167,50 @@
                 "type": "video",
                 "src": "images/2026_artico/novamedia_artico_12.mp4",
                 "controls": false
+            }
+        ]
+    },
+    {
+        "id": "angelinoartworks",
+        "title": "Angelino Artworks",
+        "year": "2026",
+        "month": "1",
+        "type": "VFX Animation",
+        "typeDetails": "In collaboration with Nick Ervinck, Angelino Artworks and Spazio Paradiso",
+        "place": "",
+        "contentFile": "content/angelino.md",
+        "mainMedia": [
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+            }
+        ],
+        "media": [
+            {
+                "type": "video",
+                "src": "images/2026_angelino/novamedia_angelino_3.mp4",
+                "loop": true,
+                "controls": false
+            },
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_1.jpg"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_angelino/novamedia_angelino_1.mp4",
+                "controls": false,
+                "loop": true
+            },
+            {
+                "type": "video",
+                "src": "images/2026_angelino/novamedia_angelino_2.mp4",
+                "controls": false,
+                "loop": true
+            },
+            {
+                "type": "image",
+                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
             }
         ]
     },
