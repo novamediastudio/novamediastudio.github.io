@@ -4,4 +4,4 @@ Aeterea is an immersive audiovisual installation conceived and produced for the 
 Visual Design | Nova Media Studio <br>
 Light Design | <a href="https://www.instagram.com/momiji__studio/" target="_blank" style="text-decoration: underline;">Momiji Studio</a> <br>
 Music | <a href="https://www.instagram.com/pigallemusic/" target="_blank" style="text-decoration: underline;">Pigalle</a> , <a href="https://www.instagram.com/mario_ferro/" target="_blank" style="text-decoration: underline;">Mario Ferro</a> , <a href="https://www.instagram.com/giorgioguerra/" target="_blank" style="text-decoration: underline;">Giorgio Guerra</a> <br>
-Photography and Videography | <a href="https://www.instagram.com/dentrooallascatola/" target="_blank" style="text-decoration: underline;">Simone Coppola</a> , <a href="https://www.instagram.com/federicasorba/" target="_blank" style="text-decoration: underline;">Federica Sorba</a> <br> 
+Photography and Videography | <a href="https://www.instagram.com/dentrooallascatola/" target="_blank" style="text-decoration: underline;">Simone Coppola</a>  <br> 

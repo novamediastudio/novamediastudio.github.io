@@ -17,13 +17,12 @@
         "media": [
             {
                "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_1.jpg",
-                "credits": "Picture by Federica Sorba",
-                "link": "https://www.instagram.com/federicasorba/"
+                "src": "images/2026_ogr/novamedia_ogr_1.jpg"
             },
             {
                 "type": "video",
-                "src": "images/2026_ogr/novamedia_ogr_2.mp4"
+                "src": "images/2026_ogr/novamedia_ogr_2.mp4",
+                "controls": false
             },
             {            
                 "type": "image",
@@ -39,7 +38,8 @@
             },
             {
                 "type": "video",
-                "src": "images/2026_ogr/novamedia_ogr_5.mp4"
+                "src": "images/2026_ogr/novamedia_ogr_5.mp4",
+                "controls": false
             },
             {
                 "type": "image",
@@ -54,10 +54,9 @@
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
              {
-                "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_8.jpg",
-                "credits": "Picture by Simone Coppola",
-                "link": "https://www.instagram.com/dentrooallascatola/"
+                "type": "video",
+                "src": "images/2026_ogr/novamedia_ogr_9.mp4",
+                "controls": false
             }
             
         ]

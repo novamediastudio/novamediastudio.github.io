@@ -1,3 +1,4 @@
+<a href="https://www.etimologiamagazine.com/2026/03/10/etimologia-incontra-nova-media-studio-people/" target="_blank">Etimologia Magazine</a>
 <a href="https://generativemedia.club/blog/nova-media-studio/" target="_blank">Gen Media Club</a>
 <a href="https://www.seminariasogninterra.it/nova-media-studio/" target="_blank">Seminaria Sogni in Terra</a>
 <a href="http://www.ilmuromagazine.com/seminaria-festival-biennale-edizione-2025/" target="_blank">Il Muro Magazine</a>
