@@ -563,7 +563,7 @@
         ]
     },
     {
-        "id": "ogr",
+        "id": "ogr24",
         "title": "Beyond the Portal",
         "type": "A/V Installation",
         "typeDetails": "ROOM x Club Silencio",
@@ -574,7 +574,7 @@
         "mainMedia": [
             {
                 "type": "video",
-                "src": "images/2024_ogr/novamedia_ogr.mp4",
+                "src": "images/2024_ogr/novamedia_ogr24.mp4",
                 "credits": "Video by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/",
                 "controls": true
@@ -583,37 +583,37 @@
         "media": [
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr_1.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_1.jpg",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr_2.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_2.jpg",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {            
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr_3.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_3.jpg",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr_4.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_4.jpg",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr_5.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_5.jpg",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr_6.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_6.jpg",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             }
