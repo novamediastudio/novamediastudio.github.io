@@ -10,8 +10,11 @@
         "contentFile": "content/ogr26.md",
         "mainMedia": [
             {
-                "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_1.jpg"
+                "type": "video",
+                "src": "images/2026_ogr/novamedia_ogr_0.mp4",
+                "credits": "Video by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/",
+                "controls": true
             }
         ],
         "media": [
