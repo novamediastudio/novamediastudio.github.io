@@ -11,5 +11,3 @@ Visual Design | Nova Media Studio <br>
 Artistic Curator | <a href="https://www.isabellaindolfi.it/" target="_blank" style="text-decoration: underline;">Isabella Indolfi</a> <br>
 Live Music | <a href="https://www.instagram.com/jumatutu/" target="_blank" style="text-decoration: underline;">Juma Tutu</a> , <a href="https://tampueduard.com/" target="_blank" style="text-decoration: underline;">Eduard Tampu</a> <br>
 Photography and Videography | <a href="https://www.isabellaindolfi.it/" target="_blank" style="text-decoration: underline;">Isabella Indolfi</a> <br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y6EuJrFFnlQ?si=58qwsPGPNxq2EbEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
