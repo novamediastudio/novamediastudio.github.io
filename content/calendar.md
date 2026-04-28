@@ -1,5 +1,6 @@
 **Exhibitions / Festivals**
 
+2026/04/23 Installation Sincronia – Fort Jesus, Mombasa, Kenya (KEN)
 2026/03/13 Installation Beyond the Portal – OGR, Turin (IT)
 2026/02/06 • 2026/02/08 Exhibition "Soglie di movimento" with Torino Creativa - Spazio Baôm, Turin (IT)
 2025/10/31 Live Visual per Iosonouncane / Daniela Pes – Club2Club, Turin (IT) 

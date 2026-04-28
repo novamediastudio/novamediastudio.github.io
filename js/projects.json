@@ -1,8 +1,79 @@
 [
+     {
+        "id": "fortjesus",
+        "title": "Sincronia",
+        "type": "A/V Installation",
+        "typeDetails": "Italian Institute of Culture, Nairobi",
+        "year": "2026",
+        "month": "4",
+        "place": "Fort Jesus <br> (Mombasa, Kenya)",
+        "contentFile": "content/fortjesus.md",
+        "mainMedia": [
+            {
+                "type": "video",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_7.mp4",
+                "controls": false
+            }
+        ],
+        "media": [
+            {
+               "type": "video",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_6.mp4",
+                "controls": false
+            },
+            {            
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_2.jpg",
+                "credits": "Picture by Isabella Indolfi",
+                "link": "https://www.isabellaindolfi.it/"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_1.jpg",
+                "credits": "Picture by Isabella Indolfi",
+                "link": "https://www.isabellaindolfi.it/"
+            },
+            {
+                "type": "video",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_5.mp4",
+                "controls": false
+            },
+            {
+                "type": "video",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_4.mp4",
+                "controls": false
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_3.jpg",
+                "credits": "Picture by Isabella Indolfi",
+                "link": "https://www.isabellaindolfi.it/"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_8.jpg",
+                "credits": "Picture by Isabella Indolfi",
+                "link": "https://www.isabellaindolfi.it/"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_10.jpg",
+                "credits": "Picture by Isabella Indolfi",
+                "link": "https://www.isabellaindolfi.it/"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_11.jpg",
+                "credits": "Picture by Isabella Indolfi",
+                "link": "https://www.isabellaindolfi.it/"
+            }
+            
+        ]
+    },
     {
         "id": "ogr",
         "title": "Aeterea",
-        "type": "A/V Installation | Projection Mapping",
+        "type": "A/V Installation",
         "typeDetails": "ROOM x Club Silencio",
         "year": "2026",
         "month": "3",
