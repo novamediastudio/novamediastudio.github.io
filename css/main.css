@@ -1,4 +1,19 @@
 @import url("../font/stylesheet.css");
+
+:root {
+  --primary-red: #db3a3a;
+  --white: #ffffff;
+  --black: #000000;
+  --transition-speed: 0.3s ease-in-out;
+
+  /* Font Scale */
+  --font-size-h1: 3.0rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.2rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.9rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,13 +29,13 @@ body {
   text-rendering: optimizeLegibility;
   height: 100vh;
   cursor: none !important;
-  background-color: #000000;
+  background-color: var(--black);
 }
 
 body {
   width: 100%;
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-  color: #ffffff;
+  color: var(--white);
   font-weight: 400;
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
@@ -32,7 +47,7 @@ body {
 
 a {
   cursor: none !important; /* Hide default cursor on links */
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -41,7 +56,7 @@ a {
   z-index: 10002; 
   width: 15px;
   height: 15px;
-  background-color: #db3a3a;
+  background-color: var(--primary-red);
   mix-blend-mode: difference;
   transform: translate(
     -50%,
@@ -78,7 +93,7 @@ h3 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: var(--font-size-h3);
 }
 
 ::-webkit-scrollbar {
@@ -88,14 +103,14 @@ h3 {
 }
 
 a:visited {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #db3a3a;
-  transition: all 0.3s ease-in-out;
+  color: var(--primary-red);
+  transition: all var(--transition-speed);
 }
 
 li {
@@ -110,11 +125,11 @@ video {
 
 .footnote-ref {
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 0.5em;
 }
 
 .footnote {
-  font-size: 0.9em;
+  font-size: var(--font-size-small);
   margin-top: 10px;
   padding: 5px;
   border-left: 3px solid #ccc;
@@ -123,7 +138,7 @@ video {
 
 .footnote-back {
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: var(--font-size-small);
   margin-left: 5px;
 }
 
@@ -168,7 +183,7 @@ video {
 }
 
 .footer:hover + .image-container {
-  background-color: #db3a3a;
+  background-color: var(--primary-red);
 }
 
 .grid {
@@ -209,7 +224,7 @@ video {
   z-index: 4;
   overflow: hidden;
   mix-blend-mode: difference;
-  font-weight: 500;
+  font-weight: 400;
   padding-bottom: 1%;
 }
 
@@ -220,18 +235,18 @@ video {
 
 .sidebar-item a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white);
 }
 
 .sidebar-item a:hover {
-  color: #db3a3a;
-  transition: all 0.3s ease-in-out;
+  color: var(--primary-red);
+  transition: all var(--transition-speed);
 }
 
 .project-year.highlight {
-  color: #db3a3a;
-  transition: all 0.3s ease-in-out;
-  background-color: #ffffff; /* Highlight color */
+  color: var(--primary-red);
+  transition: all var(--transition-speed);
+  background-color: var(--white); /* Highlight color */
 }
 
 .sequential-number {
@@ -325,17 +340,17 @@ video {
 
 .work-content h1 {
   font-weight: 500;
-  font-size: 3.5rem;
+  font-size: var(--font-size-h1);
 }
 
 .work-content h2 {  
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: var(--font-size-h2);
 }
 
 .work-content h3 {
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: calc(var(--font-size-h3) * 0.85);
 }
 
 .work-content p {
@@ -351,7 +366,8 @@ video {
 }
 
 .project-details {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  font-size: var(--font-size-body); 
 }
 
 .project-details a:hover {
@@ -373,8 +389,8 @@ video {
 }
 
 .main-media-credits {
-  font-size: 1vw;
-  color: #ffffff;
+  font-size: var(--font-size-body);
+  color: var(--white);
   margin-top: 5px;
   text-align: right;
   font-weight: 400;
@@ -494,7 +510,7 @@ video {
   display: flex; /* Use Flexbox to center content */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  background-color: #000000;
+  background-color: var(--black);
   padding: 30px;
   box-sizing: border-box; /* Include padding in width and height */
   position: relative;
@@ -503,12 +519,11 @@ video {
 
 .modal-image,
 .modal-video {
-  max-width: 100%;
+  max-width: 80%;
   max-height: 80%;
   width: auto;
   height: auto;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding: 5vw 0;
   z-index: 5;
 }
 
@@ -518,9 +533,9 @@ video {
   bottom: 4vw;
   left: 50%;
   transform: translateX(-50%);
-  color: #ffffff;
+  color: var(--white);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: var(--font-size-small);
   z-index: 5;
   pointer-events: none;
   text-decoration: overline;
@@ -553,14 +568,14 @@ video {
   bottom: 7vh;
   right: 2%;
   z-index: 5;
-  color: #ffffff;
+  color: var(--white);
   z-index: 5;
   text-decoration: underline;
 }
 
 .close:hover,
 .close:focus {
-  color: #ffffff;
+  color: var(--white);
   cursor: none !important;
 }
 
@@ -569,7 +584,7 @@ video {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0);
-  color: rgb(255, 255, 255);
+  color: var(--white);
   border: none;
   font-size: 30px;
   padding: 5vw;
@@ -580,7 +595,7 @@ video {
 
 .arrow:hover,
 .arrow:focus {
-  color: #ffffff;
+  color: var(--white);
   cursor: none !important;
 }
 
@@ -592,16 +607,10 @@ video {
   right: -150px;
 }
 
-#next-project-container {
-  font-size: 1.2rem;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
 #about-content {
-  width: 35%;
-  margin-top: 10vw;
-  margin-left: 5%;
+  width: 28%;
+  margin-top: 13vw;
+  margin-left: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -613,7 +622,7 @@ video {
 
 #about-content a, 
 #about-content a:visited {
-  color: #db3a3a;
+  color: var(--primary-red);
 }
 
 #about-content a:hover,
@@ -631,7 +640,7 @@ video {
 
 .portrait {
   width: 80%;
-  max-width: 30vw; /* Adjust the size as needed */
+  max-width: 40vw; /* Adjust the size as needed */
   margin: auto;
   display: block;
 }
@@ -665,16 +674,10 @@ video {
   z-index: -1;
 }
 
-.modal-image,
-.modal-video {
-  max-width: 70%;
-  max-height: 100%;
-}
-
 #next-project-container {
-  font-size: 2.1vh;
+  font-size: var(--font-size-h2);
   margin-bottom: 10px;
-  color: #ffffff;
+  color: var(--white);
 }
 
 #press,
@@ -691,7 +694,7 @@ video {
 
 #press a,
 #calendar a {
-  color: #db3a3a;
+  color: var(--primary-red);
   text-decoration: none;
 }
 
@@ -702,11 +705,11 @@ video {
 
 #calendar h3,
 #press h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-h2);
   text-transform: uppercase;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--white);
   padding-bottom: 0.5rem;
   font-weight: 400;
   scroll-margin-top: 15vh;
@@ -714,7 +717,7 @@ video {
 
 #calendar h4,
 #press h4 {
-  font-size: 1rem;
+  font-size: var(--font-size-body);
   text-transform: uppercase;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
@@ -740,7 +743,7 @@ video {
 #press .date {
   min-width: 24ch;
   flex-shrink: 0;
-  color: #db3a3a;
+  color: var(--primary-red);
 }
 
 #calendar .event,
@@ -771,17 +774,17 @@ video {
 }
 
 .landing-text {
-  font-size: 1.5rem;
+  font-size: var(--font-size-h2);
   font-weight: 400;
-  color: #ffffff;
+  color: var(--white);
   margin-bottom: 5vh;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .enter-link {
-  font-size: 1.8vw;
-  color: #ffffff;
+  font-size: var(--font-size-h1);
+  color: var(--white);
   text-decoration: none;
   border: none;
   padding: 20px;
@@ -792,7 +795,7 @@ video {
 
 .enter-link:hover {
   background-color: transparent;
-  color: #db3a3a;
+  color: var(--primary-red);
   transform: translateY(10px);
 }
 
@@ -830,7 +833,7 @@ video {
   width: 100%;
   height: 100%;
   z-index: 10000;
-  background-color: #000;
+  background-color: var(--black);
   transition: transform 1s ease-in-out;
 }
 
@@ -845,6 +848,11 @@ video {
 
   body {
     font-size: 2.3vh; /* Adjusts size relative to viewport width */
+    --font-size-h1: 2.8vh;
+    --font-size-h2: 2.1vh;
+    --font-size-h3: 1.8vh;
+    --font-size-body: 1.6vh;
+    --font-size-small: 1.4vh;
   }
 
   .main-content {
@@ -865,7 +873,7 @@ video {
 
   .header {
     position: fixed;
-    background-color: #000000;
+    background-color: var(--black);
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
@@ -933,20 +941,20 @@ video {
 
   .work-content h1 {
     font-weight: bold;
-    font-size: 2.8vh;
+    font-size: var(--font-size-h1);
   }
 
   .work-content h2 {
-    font-size: 1.8vh;
+    font-size: var(--font-size-h2);
   }
 
   .work-content h3,
   #calendar h3 {
-    font-size: 1.8vh;
+    font-size: var(--font-size-h3);
   }
 
   .modal {
-    background-color: #000000;
+    background-color: var(--black);
   }
 
   .modal-content {  
@@ -963,7 +971,7 @@ video {
   }
 
   .main-media-credits {
-    font-size: 1.8vh;
+    font-size: var(--font-size-body);
     text-decoration: none;
   }
 
@@ -979,7 +987,7 @@ video {
   }
 
   .media-credits {
-    font-size: 2vh;
+    font-size: var(--font-size-h2);
     bottom: 10vh;
     font-weight: 400;
   }
@@ -1021,18 +1029,18 @@ video {
 
   #calendar h3,
   #press h3 {
-  font-size: 2.8vh;
+  font-size: var(--font-size-h1);
   text-transform: uppercase;
   margin-top: 2.8vh;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--white);
   padding-bottom: 0.5rem;
   font-weight: 400;
   }
 
   #calendar h4,
   #press h4 {
-    font-size: 1.8vh;
+    font-size: var(--font-size-h3);
     text-transform: uppercase;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -1069,11 +1077,11 @@ video {
 
   a:hover,
   a:focus {
-    color: #ffffff;
+    color: var(--white);
   }
 
   .sidebar-item .project-year.highlight {
-    background-color: black;
+    background-color: var(--black);
   }
 
   g {
@@ -1090,7 +1098,7 @@ video {
     height: 3vh;
   }
   .landing-text {
-    font-size: 2.3vh;
+    font-size: var(--font-size-body);
     font-weight: 400;
     padding: 5vh;
   }
@@ -1098,6 +1106,6 @@ video {
     position: relative;
     top: 10vh;
     font-weight: 400;
-    font-size: 2.8vh;
+    font-size: var(--font-size-h1);
   }
 }

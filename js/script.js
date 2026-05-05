@@ -36,12 +36,12 @@ fetch('js/projects.json')
       let line = '';
       if (project.year !== currentYear) {
         currentYear = project.year;
-        yearDisplay = `<div class="project-year" data-year="${project.year}" style="flex: 0.3; text-align: left;">${project.year}</div>`;
-        yearDisplayMobile = `<div class="project-year" data-year="${project.year}" style="flex: 0 0 60px; text-align: left;">${project.year}</div>`;
+        yearDisplay = `<div class="project-year" data-year="${project.year}" style="flex: 0.3; text-align: left; font-weight: 500;">${project.year}</div>`;
+        yearDisplayMobile = `<div class="project-year" data-year="${project.year}" style="flex: 0 0 60px; text-align: left; font-weight: 500;">${project.year}</div>`;
         line = '<hr>';
       } else {
-        yearDisplay = `<div class="project-year" data-year="${project.year}" style="flex: 0.3; text-align: left;"></div>`;
-        yearDisplayMobile = `<div class="project-year" data-year="${project.year}" style="flex: 0 0 60px; text-align: left;"></div>`;
+        yearDisplay = `<div class="project-year" data-year="${project.year}" style="flex: 0.3; text-align: left; font-weight: 500;"></div>`;
+        yearDisplayMobile = `<div class="project-year" data-year="${project.year}" style="flex: 0 0 60px; text-align: left; font-weight: 500;"></div>`;
       }
 
       const formattedIndex = projectIndex.toString().padStart(3, '0'); // Format as 001, 002, etc.
@@ -54,12 +54,10 @@ fetch('js/projects.json')
             <div class="desktop" style="display: flex; align-items: center;">
               <!-- Year -->
               ${yearDisplay}
-              <!-- Sequential Number -->
-              <div class="sequential-number">${formattedIndex}</div>
               <!-- Title -->
-              <div style="flex: 2; text-align: left;">${project.title}</div>
+              <div style="flex: 1.5; text-align: left;">${project.title}</div>
               <!-- Type -->
-              <div style="flex: 2; text-align: left;">${project.type}</div>
+              <div style="flex: 1.5; text-align: left;">${project.type}</div>
             </div>
             <div class="mobile">
               <div style="display: flex; align-items: left;">
