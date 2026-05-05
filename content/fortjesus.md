@@ -6,8 +6,8 @@ The initiative pays tribute to Fort Jesus and the legacy of Giovanni Battista Ca
 
 Now recognized as a UNESCO site, Fort Jesus stands as a symbol of dialogue between cultures and an exceptional stage for a project that weaves together contemporary art, historical memory, and technological innovation.
 
-## **Credits**:
-Visual Design | Nova Media Studio <br>
+## Credits
+Visuals and Sound | Nova Media Studio <br>
 Artistic Curator | <a href="https://www.isabellaindolfi.it/" target="_blank" style="text-decoration: underline;">Isabella Indolfi</a> <br>
-Live Music | <a href="https://www.instagram.com/jumatutu/" target="_blank" style="text-decoration: underline;">Juma Tutu</a> , <a href="https://tampueduard.com/" target="_blank" style="text-decoration: underline;">Eduard Tampu</a> <br>
-Photography and Videography | <a href="https://www.isabellaindolfi.it/" target="_blank" style="text-decoration: underline;">Isabella Indolfi</a> <br>
+Music Advisor| <a href="https://www.instagram.com/jumatutu/" target="_blank" style="text-decoration: underline;">Juma Tutu</a>
+Technical Support | Jay Pyrotechnics

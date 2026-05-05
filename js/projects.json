@@ -11,7 +11,7 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_11.jpg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_7.jpg"
             }
         ],
         "media": [
@@ -27,33 +27,26 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_3.jpg",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_3.jpeg"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_5.jpeg"
+            },
+            {
+                "type": "image",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_6.jpeg",
                 "credits": "Picture by Isabella Indolfi",
                 "link": "https://www.isabellaindolfi.it/"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_4.jpg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_8.jpg"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_5.jpg"
-            },
-            {
-                "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_6.jpg"
-            },
-            {
-                "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_8.jpg",
-                "credits": "Picture by Isabella Indolfi",
-                "link": "https://www.isabellaindolfi.it/"
-            },
-            {
-                "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_10.jpg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_4.jpeg"
             }
-            
         ]
     },
     {

@@ -9,9 +9,10 @@
   /* Font Scale */
   --font-size-h1: 3.0rem;
   --font-size-h2: 1.5rem;
-  --font-size-h3: 1.2rem;
-  --font-size-body: 1rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body: 1.2rem;
   --font-size-small: 0.9rem;
+  --font-size-credits: 1rem;
 }
 
 * {
@@ -230,6 +231,7 @@ video {
 
 .sidebar-item {
   width: 100%; /* Adjust the width as needed */
+  font-size: var(--font-size-body);
   text-align: left; /* Center the text */
 }
 
@@ -389,7 +391,7 @@ video {
 }
 
 .main-media-credits {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-credits);
   color: var(--white);
   margin-top: 5px;
   text-align: right;
@@ -535,7 +537,7 @@ video {
   transform: translateX(-50%);
   color: var(--white);
   font-weight: 500;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-credits);
   z-index: 5;
   pointer-events: none;
   text-decoration: overline;
@@ -609,8 +611,9 @@ video {
 
 #about-content {
   width: 28%;
-  margin-top: 13vw;
+  margin-top: 7vw;
   margin-left: 0%;
+  font-size: var(--font-size-body);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -682,8 +685,9 @@ video {
 
 #press,
 #calendar {
+  font-size: var(--font-size-body);
   width: 65%;
-  margin-top: 5vh;
+  margin-top: 3vh;
   margin-left: 15%;
   text-align: justify;
   display: flex;
@@ -847,12 +851,13 @@ video {
   .mobile { display: block; visibility: visible; }
 
   body {
-    font-size: 2.3vh; /* Adjusts size relative to viewport width */
-    --font-size-h1: 2.8vh;
-    --font-size-h2: 2.1vh;
-    --font-size-h3: 1.8vh;
-    --font-size-body: 1.6vh;
-    --font-size-small: 1.4vh;
+    font-size: 1.8vh; /* Adjusts size relative to viewport height */
+    --font-size-h1: 3.8vh;
+    --font-size-h2: 2.6vh;
+    --font-size-h3: 2.2vh;
+    --font-size-body: 2.1vh;
+    --font-size-small: 1.5vh;
+    --font-size-credits: 1.4vh;
   }
 
   .main-content {
@@ -940,7 +945,7 @@ video {
   }
 
   .work-content h1 {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: var(--font-size-h1);
   }
 
@@ -971,7 +976,7 @@ video {
   }
 
   .main-media-credits {
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-credits);
     text-decoration: none;
   }
 
@@ -987,7 +992,7 @@ video {
   }
 
   .media-credits {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-credits);
     bottom: 10vh;
     font-weight: 400;
   }

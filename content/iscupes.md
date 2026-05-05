@@ -4,7 +4,7 @@ Our approach to the camera processing wanted to work with the vision of the arti
 
 These visuals were mapped across a custom LED wall configuration consisting of one expansive horizontal display complemented by two IMAGS, creating a panoramic visual field that wrapped the audience in a cohesive visual environment.
 
-## **Credits**:
+## Credits
 
 Produced by | <a href="https://www.instagram.com/panicoconcerti" target="_blank" style="text-decoration: underline;">@panicoconcerti</a> & <a href="https://www.instagram.com/tancarecords" target="_blank" style="text-decoration: underline;">@tancarecords</a> <br>
 Partitura visiva | Alessandro Gagliardo <br>
