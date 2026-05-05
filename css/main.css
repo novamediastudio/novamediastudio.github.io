@@ -1058,7 +1058,7 @@ video {
   
   .portrait {
     width: 100%;
-    max-width: 50vw; /* Adjust the size as needed */
+    max-width: 80vw; /* Adjust the size as needed */
     margin: 0 0 0 0;
     padding: 0 0 0 0;
   }
