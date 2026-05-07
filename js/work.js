@@ -23,12 +23,10 @@ fetch('js/projects.json')
 
             // Populate project details
             document.getElementById('work-title').textContent = project.title;
-            document.getElementById('work-subtitle').innerHTML = `
-                <h2>${project.year}${project.place ? ` | ${project.place}` : ''}</h2>
-            `;
-            document.getElementById('work-details').innerHTML = `
-                <h3>${project.type}${project.typeDetails ? ` <br> ${project.typeDetails}` : ''}</h3>
-            `;
+            document.getElementById('work-subtitle').innerHTML =
+                `${project.year}${project.place ? ` &mdash; ${project.place}` : ''}`;
+            document.getElementById('work-details').innerHTML =
+                `${project.type}${project.typeDetails ? `<br>${project.typeDetails}` : ''}`;
 
             if (project.link) {
                 document.getElementById('work-link').href = project.link;
@@ -228,7 +226,7 @@ fetch('js/projects.json')
                         mediaElement.src = mediaItem.src;
                         mediaElement.loading = "lazy";
                         mediaElement.addEventListener('click', () => {
-                            openModal(index, 'image');
+                            openModal(index);
                         });
 
                     } else if (mediaItem.type === 'video') {
@@ -240,7 +238,7 @@ fetch('js/projects.json')
                         mediaElement.playsInline = true;
                         mediaElement.setAttribute('playsinline', '');
                         mediaElement.addEventListener('click', () => {
-                            openModal(index, 'video');
+                            openModal(index);
                         });
 
                     } else if (mediaItem.type === 'google-drive-video') {
@@ -271,17 +269,41 @@ fetch('js/projects.json')
                 console.log("No media items found for this project.");
             }
 
-            // Suggest another work
-            const otherProjects = data.filter(p => p.id != projectId);
-            if (otherProjects.length > 0) {
-                const randomProject = otherProjects[Math.floor(Math.random() * otherProjects.length)];
-                const nextContainer = document.getElementById('next-project-container');
-                if (nextContainer) {
-                    nextContainer.innerHTML = `
-                        <div>Next Project</div>
-                        <a href="work.html?id=${randomProject.id}">${randomProject.title} &rarr;</a>
-                    `;
+            // Prev / Next navigation — sorted the same way as the index page
+            const sortedData = [...data].sort((a, b) => {
+                const isANumeric = !isNaN(a.year);
+                const isBNumeric = !isNaN(b.year);
+                if (!isANumeric && isBNumeric) return 1;
+                if (isANumeric && !isBNumeric) return -1;
+                if (!isANumeric && !isBNumeric) return a.year.localeCompare(b.year);
+                if (a.year !== b.year) return b.year.localeCompare(a.year);
+                return (b.month || 0) - (a.month || 0);
+            });
+
+            const currentIdx  = sortedData.findIndex(p => p.id == projectId);
+            const prevProject = currentIdx > 0 ? sortedData[currentIdx - 1] : null;
+            const nextProject = currentIdx < sortedData.length - 1 ? sortedData[currentIdx + 1] : null;
+
+            const nextContainer = document.getElementById('next-project-container');
+            if (nextContainer) {
+                let html = '';
+                if (prevProject) {
+                    html += `
+                        <a href="work.html?id=${prevProject.id}" class="project-nav prev-project">
+                            <span class="project-nav-label">&larr; Previous</span>
+                            <span class="project-nav-title">${prevProject.title}</span>
+                        </a>`;
+                } else {
+                    html += `<span></span>`;
                 }
+                if (nextProject) {
+                    html += `
+                        <a href="work.html?id=${nextProject.id}" class="project-nav next-project">
+                            <span class="project-nav-label">Next &rarr;</span>
+                            <span class="project-nav-title">${nextProject.title}</span>
+                        </a>`;
+                }
+                nextContainer.innerHTML = html;
             }
         } else {
             console.error("Project not found");
@@ -293,152 +315,116 @@ fetch('js/projects.json')
         document.getElementById('work-title').textContent = 'Error loading project details';
     });
 
-// Function to open the modal and display the media
-function openModal(index, type) {
+// ── Lightbox ─────────────────────────────────────────────────────────────────
+function openModal(index) {
     currentMediaIndex = index;
-
-    // Create modal structure
-    const modal = document.createElement('div');
-    // When modal is open, body scroll is hidden
     document.body.style.overflow = 'hidden';
-    modal.id = 'media-modal';
-    modal.className = 'modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <img id="modal-image" class="modal-image" src="" alt="Expanded Image">
-            <video id="modal-video" class="modal-video" preload="metadata" loop playsinline></video>
-            <div id="media-credits" class="media-credits"></div>
-            <button id="prev-media" class="arrow left">&larr;</button>
-            <button id="next-media" class="arrow right">&rarr;</button>
-            <span id="close-modal" class="close">close</span>
+
+    const lb = document.createElement('div');
+    lb.id   = 'media-modal';
+    lb.className = 'lightbox';
+    lb.innerHTML = `
+        <div class="lb-zone lb-prev" id="lb-prev"></div>
+        <div class="lb-zone lb-next" id="lb-next"></div>
+        <img   class="lb-media" id="lb-img" alt="">
+        <video class="lb-media" id="lb-vid" loop playsinline></video>
+        <div class="lb-bar">
+            <span class="lb-credits" id="lb-credits"></span>
+            <span class="lb-counter" id="lb-counter"></span>
         </div>
+        <span class="lb-close" id="lb-close">close</span>
     `;
+    document.body.appendChild(lb);
 
-    // Append modal to body
-    document.body.appendChild(modal);
+    const img      = lb.querySelector('#lb-img');
+    const vid      = lb.querySelector('#lb-vid');
+    const credits  = lb.querySelector('#lb-credits');
+    const counter  = lb.querySelector('#lb-counter');
+    const closeBtn = lb.querySelector('#lb-close');
+    const prevZone = lb.querySelector('#lb-prev');
+    const nextZone = lb.querySelector('#lb-next');
+    const total    = mediaItems.length;
 
-    const modalImage = document.getElementById('modal-image');
-    const modalVideo = document.getElementById('modal-video');
-    const mediaCredits = document.getElementById('media-credits');
+    // ── Render a media item with crossfade ──
+    function show(idx) {
+        const item = mediaItems[idx];
+        counter.textContent = `${String(idx + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
 
-    const updateCredits = (idx) => {
-        if (mediaItems[idx].credits) {
-            if (mediaItems[idx].link) {
-                mediaCredits.innerHTML = `<a href="${mediaItems[idx].link}" target="_blank">${mediaItems[idx].credits}</a>`;
-                mediaCredits.style.pointerEvents = 'auto';
-            } else {
-                mediaCredits.textContent = mediaItems[idx].credits;
-                mediaCredits.style.pointerEvents = 'none';
-            }
-            mediaCredits.style.display = 'block';
+        if (item.credits) {
+            credits.innerHTML = item.link
+                ? `<a href="${item.link}" target="_blank">${item.credits}</a>`
+                : item.credits;
+            credits.style.visibility = 'visible';
         } else {
-            mediaCredits.style.display = 'none';
+            credits.style.visibility = 'hidden';
         }
-    };
 
-    if (type === 'image') {
-        modalImage.src = mediaItems[index].src;
-        modalImage.style.display = 'block';
-        modalVideo.style.display = 'none';
-    } else if (type === 'video') {
-        modalVideo.src = mediaItems[index].src;
-        modalVideo.style.display = 'block';
-        modalImage.style.display = 'none';
-        modalVideo.play();
+        // Fade out, swap, fade in
+        img.style.opacity = '0';
+        vid.style.opacity = '0';
+        setTimeout(() => {
+            if (item.type === 'image') {
+                img.src = item.src;
+                img.style.display = 'block';
+                vid.style.display  = 'none';
+                vid.pause();
+                const reveal = () => { img.style.opacity = '1'; };
+                img.complete ? reveal() : (img.onload = reveal);
+            } else if (item.type === 'video') {
+                vid.src = item.src;
+                vid.style.display  = 'block';
+                img.style.display  = 'none';
+                vid.play();
+                vid.style.opacity = '1';
+            }
+        }, 160);
     }
-    updateCredits(index);
 
-    modal.style.display = 'flex'; // Change to 'flex' to use Flexbox centering
+    // ── Navigate ──
+    function go(dir) {
+        currentMediaIndex = (currentMediaIndex + dir + total) % total;
+        show(currentMediaIndex);
+    }
 
-    // Close the modal when the close button is clicked
-    document.getElementById('close-modal').addEventListener('click', () => {
+    // ── Close ──
+    function close() {
         document.body.style.overflow = 'auto';
-        modal.style.display = 'none';
-        modal.remove(); // Remove modal from DOM
-        modalVideo.pause(); // Pause the video when closing the modal
-    });
-
-    // Close the modal when clicking outside of the modal content
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            document.body.style.overflow = 'auto';
-            modal.style.display = 'none';
-            modal.remove(); // Remove modal from DOM
-            modalVideo.pause(); // Pause the video when closing the modal
-        }
-    });
-
-    // Navigate to the previous media item
-    document.getElementById('prev-media').addEventListener('click', () => {
-        currentMediaIndex = (currentMediaIndex - 1 + mediaItems.length) % mediaItems.length;
-        updateModalContent();
-    });
-
-    // Navigate to the next media item
-    document.getElementById('next-media').addEventListener('click', () => {
-        currentMediaIndex = (currentMediaIndex + 1) % mediaItems.length;
-        updateModalContent();
-    });
-
-    // Navigate using keyboard arrows
-    window.addEventListener('keydown', handleKeydown);
-
-    function handleKeydown(event) {
-        if (event.key === 'ArrowLeft') {
-            currentMediaIndex = (currentMediaIndex - 1 + mediaItems.length) % mediaItems.length;
-            updateModalContent();
-        } else if (event.key === 'ArrowRight') {
-            currentMediaIndex = (currentMediaIndex + 1) % mediaItems.length;
-            updateModalContent();
-        } else if (event.key === 'Escape') {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            modal.remove(); // Remove modal from DOM
-            modalVideo.pause(); // Pause the video when closing the modal
-            window.removeEventListener('keydown', handleKeydown); // Remove event listener
-        }
+        vid.pause();
+        lb.remove();
+        window.removeEventListener('keydown', onKey);
     }
 
-    // Swipe gestures
-    let touchStartX = 0;
-    let touchEndX = 0;
+    // Initial render
+    show(index);
 
-    modal.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
+    // Click zones
+    prevZone.addEventListener('click', () => go(-1));
+    nextZone.addEventListener('click', () => go(1));
+    closeBtn.addEventListener('click', close);
+
+    // Keyboard
+    function onKey(e) {
+        if (e.key === 'ArrowLeft')  go(-1);
+        if (e.key === 'ArrowRight') go(1);
+        if (e.key === 'Escape')     close();
+    }
+    window.addEventListener('keydown', onKey);
+
+    // Touch: swipe horizontal → navigate, swipe down → close
+    let tx = 0, ty = 0;
+    lb.addEventListener('touchstart', e => {
+        tx = e.changedTouches[0].screenX;
+        ty = e.changedTouches[0].screenY;
     }, { passive: true });
-
-    modal.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
+    lb.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].screenX - tx;
+        const dy = e.changedTouches[0].screenY - ty;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+            go(dx < 0 ? 1 : -1);
+        } else if (dy > 80 && Math.abs(dy) > Math.abs(dx)) {
+            close();
+        }
     }, { passive: true });
-
-    function handleSwipe() {
-        if (touchEndX < touchStartX - 50) {
-            // Swipe Left -> Next
-            currentMediaIndex = (currentMediaIndex + 1) % mediaItems.length;
-            updateModalContent();
-        }
-        if (touchEndX > touchStartX + 50) {
-            // Swipe Right -> Previous
-            currentMediaIndex = (currentMediaIndex - 1 + mediaItems.length) % mediaItems.length;
-            updateModalContent();
-        }
-    }
-
-    function updateModalContent() {
-        updateCredits(currentMediaIndex);
-        if (mediaItems[currentMediaIndex].type === 'image') {
-            modalImage.src = mediaItems[currentMediaIndex].src;
-            modalImage.style.display = 'block';
-            modalVideo.style.display = 'none';
-            modalVideo.pause();
-        } else if (mediaItems[currentMediaIndex].type === 'video') {
-            modalVideo.src = mediaItems[currentMediaIndex].src;
-            modalVideo.style.display = 'block';
-            modalImage.style.display = 'none';
-            modalVideo.play();
-        }
-    }
 }
 
 function openModalForMarkdown(imageSrc) {

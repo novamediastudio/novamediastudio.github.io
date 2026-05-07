@@ -1,0 +1,23 @@
+{
+  "sequence": [
+    { "file": "web_sand.mp4", "tag": "Iosonouncane & Daniela Pes | 2025" },
+    { "file": "web_c2c_1.mp4", "tag": "Iosonouncane & Daniela Pes | 2025" },
+    { "file": "web_c2c_2.mp4", "tag": "Iosonouncane & Daniela Pes | 2025" },
+    { "file": "web_c2c_3.mp4", "tag": "Iosonouncane & Daniela Pes | 2025" },
+    { "file": "web_fabrique.mp4", "tag": "VJ Fabrique Milano | 2025" },
+    { "file": "web_gio_evan_1.mp4", "tag": "Gio Evan Italian Tour | 2025" },
+    { "file": "web_gio_evan_2.mp4", "tag": "Gio Evan Italian Tour | 2025" },
+    { "file": "web_nick_ervnick_1.mp4", "tag": "Angelino Artworks | 2025" },
+    { "file": "web_nick_ervnick_2.mp4", "tag": "Angelino Artworks | 2025" },
+    { "file": "web_ogr_24.mp4", "tag": "Beyond the Portal | 2024" },
+    { "file": "web_seminaria_2.mp4", "tag": "Tempo Organico | 2025" },
+    { "file": "web_seminaria_3.mp4", "tag": "Tempo Organico  | 2025" },
+    { "file": "web_seminaria_performance_1.mp4", "tag": "Tempo Organico | 2025" },
+    { "file": "web_venaria_1.mp4", "tag": "Dreaming | 2025" },
+    { "file": "web_venaria_2.mp4", "tag": "Dreaming | 2025" },
+    { "file": "web_venaria_3.mp4", "tag": "Dreaming | 2025" }
+  ],
+  "loop": true,
+  "baseURL": "videos/",
+  "fadeDuration": 500
+}

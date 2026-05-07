@@ -36,35 +36,30 @@ fetch('js/projects.json')
       let line = '';
       if (project.year !== currentYear) {
         currentYear = project.year;
-        yearDisplay = `<div class="project-year" data-year="${project.year}" style="flex: 0.3; text-align: left; font-weight: 500;">${project.year}</div>`;
-        yearDisplayMobile = `<div class="project-year" data-year="${project.year}" style="flex: 0 0 60px; text-align: left; font-weight: 500;">${project.year}</div>`;
+        yearDisplay = `<div class="project-year" data-year="${project.year}">${project.year}</div>`;
+        yearDisplayMobile = `<div class="project-year" data-year="${project.year}">${project.year}</div>`;
         line = '<hr>';
       } else {
-        yearDisplay = `<div class="project-year" data-year="${project.year}" style="flex: 0.3; text-align: left; font-weight: 500;"></div>`;
-        yearDisplayMobile = `<div class="project-year" data-year="${project.year}" style="flex: 0 0 60px; text-align: left; font-weight: 500;"></div>`;
+        yearDisplay = `<div class="project-year" data-year="${project.year}"></div>`;
+        yearDisplayMobile = `<div class="project-year" data-year="${project.year}"></div>`;
       }
 
       const formattedIndex = projectIndex.toString().padStart(3, '0'); // Format as 001, 002, etc.
 
       return `
-        <div class="sidebar-item" 
-             onmouseover="startSlideshow(${index}); highlightYear('${project.year}')" 
+        <div class="sidebar-item"
+             onmouseover="startSlideshow(${index}); highlightYear('${project.year}')"
              onmouseout="stopSlideshow(); removeHighlight('${project.year}')">
           <a href="work.html?id=${project.id}" class="project-link">
-            <div class="desktop" style="display: flex; align-items: center;">
-              <!-- Year -->
+            <div class="desktop sidebar-row">
               ${yearDisplay}
-              <!-- Title -->
-              <div style="flex: 1.5; text-align: left;">${project.title}</div>
-              <!-- Type -->
-              <div style="flex: 1.5; text-align: left;">${project.type}</div>
+              <div class="project-title">${project.title}</div>
+              <div class="project-type">${project.type}</div>
             </div>
             <div class="mobile">
-              <div style="display: flex; align-items: left;">
-                <!-- Year -->
+              <div class="sidebar-row-mobile">
                 ${yearDisplayMobile}
-                <!-- Title -->
-                <div style="flex: 2.6; text-align: left;">${project.title} <g> ${project.type}</g></div>
+                <div class="project-title-mobile">${project.title} <g>${project.type}</g></div>
               </div>
             </div>
           </a>
@@ -171,43 +166,64 @@ if (projectDetails) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const imageGallery = document.getElementById('image-gallery');
-  const projectSection = document.querySelector('.sidebar');
-
-  if (projectSection) {
-  window.addEventListener('scroll', function () {
-    const projectSectionTop = projectSection.getBoundingClientRect().top;
-    const headerHeight = document.querySelector('.header').offsetHeight;
-
-    if (projectSectionTop <= headerHeight) {
-      imageGallery.classList.add('fixed');
-    } else {
-      imageGallery.classList.remove('fixed');
-    }
-  });
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
   const imageGallery = document.getElementById('gallery-image');
-  let images = [];
+  let images = []; // each entry: { src, title, year, id }
   let slideshowInterval;
 
-  function showRandomImage() {
-    if (images.length > 0) {
-      const currentIndex = Math.floor(Math.random() * images.length);
-      imageGallery.innerHTML = `<img src="${images[currentIndex]}" alt="Slideshow Image" class="active">`;
+  // Persistent tag element — created once, updated on each image change
+  const galleryTag = document.createElement('a');
+  galleryTag.className = 'gallery-project-tag';
+  galleryTag.innerHTML = '<span class="gallery-tag-year"></span><span class="gallery-tag-title"></span>';
+  document.body.appendChild(galleryTag);
+
+  const tagYearEl  = galleryTag.querySelector('.gallery-tag-year');
+  const tagTitleEl = galleryTag.querySelector('.gallery-tag-title');
+
+  let tagTypingTimeout = null;
+
+  // Typewriter for the gallery title — erases current text then types new one
+  function typeGalleryTitle(element, newText) {
+    if (tagTypingTimeout) clearTimeout(tagTypingTimeout);
+    const typeSpeed   = 28;
+    const eraseSpeed  = 18;
+    const current     = element.textContent;
+
+    function erase(len) {
+      if (len === 0) { type(0); return; }
+      element.textContent = current.substring(0, len - 1);
+      tagTypingTimeout = setTimeout(() => erase(len - 1), eraseSpeed);
+    }
+
+    function type(i) {
+      if (i > newText.length) return;
+      element.textContent = newText.substring(0, i);
+      tagTypingTimeout = setTimeout(() => type(i + 1), typeSpeed);
+    }
+
+    if (current === '') {
+      type(0);
+    } else {
+      erase(current.length);
     }
   }
 
-  // Fetch projects data and store image paths in an array
+  function showRandomImage() {
+    if (images.length === 0) return;
+    const item = images[Math.floor(Math.random() * images.length)];
+    imageGallery.innerHTML = `<img src="${item.src}" alt="${item.title}" class="active">`;
+    galleryTag.href = `work.html?id=${item.id}`;
+    tagYearEl.textContent  = item.year;
+    typeGalleryTitle(tagTitleEl, item.title.toUpperCase());
+  }
+
+  // Fetch projects data and store image entries with project metadata
   fetch('js/projects.json')
     .then(response => response.json())
     .then(data => {
       data.forEach(project => {
         project.media.forEach(mediaItem => {
           if (mediaItem.type === 'image' && !mediaItem.excludeFromIndex) {
-            images.push(mediaItem.src);
+            images.push({ src: mediaItem.src, title: project.title, year: project.year, id: project.id });
           }
         });
       });
@@ -222,8 +238,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-  // Function to stop the initial slideshow
-  function stopSlideshow() {
+  // Function to stop the background (index) slideshow
+  function stopBackgroundSlideshow() {
     if (slideshowInterval) {
       clearInterval(slideshowInterval);
       slideshowInterval = null;
@@ -233,35 +249,29 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add hover event listeners to project elements
   const projectList = document.getElementById('project-list');
   if (projectList) {
+    // mouseover bubbles — only act when entering a sidebar-item from outside it
     projectList.addEventListener('mouseover', function (event) {
-      if (event.target.closest('.sidebar-item')) {
-        stopSlideshow();
-      }
+      const item = event.target.closest('.sidebar-item');
+      if (!item) return;
+      // relatedTarget is where the mouse came from; skip if still within same item
+      if (item.contains(event.relatedTarget)) return;
+      stopBackgroundSlideshow();
+      galleryTag.style.visibility = 'hidden'; // hide tag — project hover takes over
     });
 
+    // mouseout bubbles — only act when truly leaving a sidebar-item
     projectList.addEventListener('mouseout', function (event) {
-      if (event.target.closest('.sidebar-item')) {
-        // Optionally, you can restart the slideshow when the mouse leaves the project
-        showRandomImage();
-        slideshowInterval = setInterval(showRandomImage, 3000);
-      }
+      const item = event.target.closest('.sidebar-item');
+      if (!item) return;
+      // relatedTarget is where the mouse went; skip if still within same item
+      if (item.contains(event.relatedTarget)) return;
+      galleryTag.style.visibility = 'visible';
+      showRandomImage();
+      slideshowInterval = setInterval(showRandomImage, 3000);
     });
   }
 
-  // Menu toggle functionality
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuItems = document.getElementById('menu-items');
-
-  if (menuToggle && menuItems) {
-    menuToggle.addEventListener('click', function () {
-      const isHidden = menuItems.style.display === 'none';
-      menuItems.style.display = isHidden ? 'block' : 'none';
-      menuToggle.textContent = isHidden ? 'close' : 'menu';
-    });
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+  /* --- Custom Cursor --- */
   const cursor = document.createElement('div');
   cursor.classList.add('custom-cursor');
   document.body.appendChild(cursor);
@@ -296,12 +306,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mouseup', () => {
     cursor.classList.remove('pressed'); 
   });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+  /* --- Typing Effect for Tags --- */
   const tags = ["A/V DUO", "VIDEO MAPPING", "IMMERSIVE EXPERIENCES"];
   const tagIds = ['current-tag', 'current-tag-mobile'];
-
   tagIds.forEach(id => {
     const tagElement = document.getElementById(id);
     if (tagElement) {
@@ -346,83 +354,118 @@ document.addEventListener('DOMContentLoaded', function () {
       }, holdTime);
     }
   });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-  const landingOverlay = document.getElementById('landing-overlay');
-  const enterBtn = document.getElementById('enter-site');
-  let isLandingVisible = true;
+  /* ── SPLASH SECTION LOGIC ── */
+  const splashEl = document.getElementById('splash'); // Renamed from splash to splashEl
+
+  // Bail out on pages that don't have the splash element (work, about, contact)
+  if (!splashEl) return;
+
+  // ── ?splash=false: suppress synchronously, before any async work ──
+  // This must happen before the manifest fetch so there is no visible flash.
+  if (new URLSearchParams(window.location.search).get('splash') === 'false') {
+    splashEl.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+    const _landingLogo = document.querySelector('.landing-logo');
+    if (_landingLogo) _landingLogo.style.display = 'block';
+    return; // Skip all splash setup
+  }
+
+  const vidA = document.getElementById('vid-a');
+  const vidB = document.getElementById('vid-b');
+  const dots = document.getElementById('progress-dots');
+  const loadBar = document.getElementById('loading-bar');
+  const loadFill = document.getElementById('loading-fill');
+  const enterText = document.getElementById('enter-text'); // Changed from skipBtn
+  const splashTag = document.getElementById('splash-tag');
+
+  /* ── State ── */
+  let sequence = []; // clip objects from manifest
+  let currentIndex = 0; // which clip is currently playing
+  let active = vidA; // the video element currently visible
+  let standby = vidB; // the video element preloading the next clip
+  let dotEls = []; // dot button elements
+
+  // Splash visibility state for scroll/touch
+  let isSplashVisible = true;
+  let isTransitioning = false;
   let scrollYAccumulator = 0;
   const thresholdRatio = 0.2;
 
-  // Force video autoplay for iOS/Safari
-  const bgVideo = document.querySelector('.landing-video-background video');
-  if (bgVideo) {
-    bgVideo.muted = true;
-    bgVideo.play().catch(e => console.log("Autoplay failed:", e));
-  }
-
-  if (landingOverlay) {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('splash') === 'false') {
-      landingOverlay.style.display = 'none';
-      document.body.style.overflow = 'hidden';
-      isLandingVisible = false;
-      
-      const landingLogo = document.querySelector('.landing-logo');
-      if (landingLogo) landingLogo.style.display = 'none';
+  /* ── 1. Fetch manifest ── */
+  let manifest;
+  (async () => { // Wrap the async part in an IIFE
+    try {
+      const res = await fetch('./js/manifest.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      manifest = await res.json();
+    } catch (err) {
+      console.error('[Splash] Could not load manifest.json:', err);
+      hideSplash(false); // Hide without animation on error
+      return;
     }
-  }
 
-  function hideLanding() {
-    if (!isLandingVisible) return;
-    isLandingVisible = false;
-    
-    // Slide out the landing page
-    landingOverlay.style.transition = 'transform 1s ease-in-out';
-    landingOverlay.style.transform = 'translateY(-100%)';
-    landingOverlay.classList.add('slide-out');
-    
-    // Enable scrolling on the body after transition
-    setTimeout(() => {
-      document.body.style.overflow = 'hidden';
-      // Optional: Pause video to save resources
-      const video = landingOverlay.querySelector('video');
-      if(video) video.pause();
+    sequence = manifest.sequence ?? [];
+    if (sequence.length === 0) {
+      hideSplash(false);
+      return;
+    }
 
-      const landingLogo = document.querySelector('.landing-logo');
-      if (landingLogo) landingLogo.style.display = 'none';
-    }, 1000); // Match transition duration
-  }
+    const loop = manifest.loop ?? true;
+    const baseURL = manifest.baseURL ?? './videos';
+    const fadeDur = manifest.fadeDuration ?? 700; // ms, should match CSS transition
 
-  if (landingOverlay && enterBtn) {
-    // Click event
-    enterBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      hideLanding();
+    /* ── 2. Build progress dots ── */
+    sequence.forEach((_, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'dot' + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', `Go to clip ${i + 1}`);
+      btn.addEventListener('click', () => jumpTo(i));
+      dots.appendChild(btn);
+      dotEls.push(btn);
     });
 
+    // Set initial state to block view
+    document.body.classList.add('splash-active');
+
+    /* ── 3. Load & play first clip ── */
+    await loadInto(active, sequence[0], true);
+    hideLoadingBar();
+    play(active);
+    updateDots(); // Initial UI update
+    addClipListeners(active);
+
+    /* Preload second clip straight away */
+    if (sequence.length > 1) {
+      preload(standby, sequence[1]);
+    }
+
+    /* ── 4. Enter text click ── */
+    enterText.addEventListener('click', () => hideSplash(true));
+
+    /* ── 5. Scroll/Touch events for hiding splash ── */
     // Scroll event (Mouse wheel)
     let wheelTimeout;
     window.addEventListener('wheel', function(e) {
-      if (!isLandingVisible) return;
-      
+      if (!isSplashVisible) return;
+
+      e.preventDefault();
       scrollYAccumulator += e.deltaY;
       if (scrollYAccumulator < 0) scrollYAccumulator = 0;
-      
+
       const windowHeight = window.innerHeight;
-      
-      landingOverlay.style.transition = 'none';
-      landingOverlay.style.transform = `translateY(-${scrollYAccumulator}px)`;
+
+      splashEl.style.transition = 'none'; // Disable transition for direct scroll
+      splashEl.style.transform = `translateY(-${scrollYAccumulator}px)`;
 
       if (scrollYAccumulator > windowHeight * thresholdRatio) {
-        hideLanding();
+        hideSplash(true); // Animate out
       } else {
         clearTimeout(wheelTimeout);
         wheelTimeout = setTimeout(() => {
-          if (isLandingVisible && scrollYAccumulator <= windowHeight * thresholdRatio) {
-            landingOverlay.style.transition = 'transform 0.5s ease-out';
-            landingOverlay.style.transform = 'translateY(0)';
+          if (isSplashVisible && scrollYAccumulator <= windowHeight * thresholdRatio) {
+            splashEl.style.transition = 'transform 0.5s ease-out';
+            splashEl.style.transform = 'translateY(0)';
             scrollYAccumulator = 0;
           }
         }, 150);
@@ -432,12 +475,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Touch event (Swipe up)
     let touchStartY = 0;
     window.addEventListener('touchstart', e => {
-        if (isLandingVisible) touchStartY = e.touches[0].clientY;
+      if (isSplashVisible) touchStartY = e.touches[0].clientY;
     }, { passive: false });
 
     window.addEventListener('touchmove', e => {
-      if (!isLandingVisible) return;
-      
+      if (!isSplashVisible) return;
+
+      e.preventDefault();
       const currentTouchY = e.touches[0].clientY;
       const deltaY = touchStartY - currentTouchY;
       touchStartY = currentTouchY;
@@ -446,22 +490,305 @@ document.addEventListener('DOMContentLoaded', function () {
       if (scrollYAccumulator < 0) scrollYAccumulator = 0;
 
       const windowHeight = window.innerHeight;
-      landingOverlay.style.transition = 'none';
-      landingOverlay.style.transform = `translateY(-${scrollYAccumulator}px)`;
+      splashEl.style.transition = 'none';
+      splashEl.style.transform = `translateY(-${scrollYAccumulator}px)`;
 
       if (scrollYAccumulator > windowHeight * thresholdRatio) {
-        hideLanding();
+        hideSplash(true);
       }
     }, { passive: false });
 
     window.addEventListener('touchend', () => {
-        if (!isLandingVisible) return;
-        const windowHeight = window.innerHeight;
-        if (scrollYAccumulator <= windowHeight * thresholdRatio) {
-            landingOverlay.style.transition = 'transform 0.5s ease-out';
-            landingOverlay.style.transform = 'translateY(0)';
-            scrollYAccumulator = 0;
-        }
+      if (!isSplashVisible) return;
+      if (!isSplashVisible || isTransitioning) return;
+      const windowHeight = window.innerHeight;
+      if (scrollYAccumulator <= windowHeight * thresholdRatio) {
+        splashEl.style.transition = 'transform 0.5s ease-out';
+        splashEl.style.transform = 'translateY(0)';
+        scrollYAccumulator = 0;
+      }
     });
-  }
+
+
+    /* ════════════════════════════════════
+       CORE FUNCTIONS
+    ════════════════════════════════════ */
+
+    /**
+     * Set up listeners to trigger the next clip transition.
+     * Triggers early based on fadeDur for a seamless crossfade.
+     */
+    function addClipListeners(videoEl) {
+      const checkTime = () => {
+        const offset = (fadeDur || 0) / 1000;
+        if (videoEl.duration && videoEl.currentTime >= videoEl.duration - offset) {
+          onClipEnded();
+        }
+      };
+      videoEl._checkTime = checkTime;
+      videoEl.addEventListener('timeupdate', checkTime);
+      videoEl.addEventListener('ended', onClipEnded);
+    }
+
+    function removeClipListeners(videoEl) {
+      videoEl.removeEventListener('ended', onClipEnded);
+      if (videoEl._checkTime) {
+        videoEl.removeEventListener('timeupdate', videoEl._checkTime);
+        delete videoEl._checkTime;
+      }
+    }
+
+    /**
+     * Called when the active video finishes.
+     */
+    function onClipEnded() {
+      removeClipListeners(active);
+      const nextIndex = (currentIndex + 1) % sequence.length;
+
+      // If we are at the end of the sequence and loop is disabled, hide the splash
+      if (nextIndex === 0 && !loop) {
+        hideSplash(true);
+        return;
+      }
+
+      transitionTo(nextIndex);
+    }
+
+    /**
+     * Jump to a specific clip index (e.g. from dot click).
+     */
+    function jumpTo(index) {
+      if (index === currentIndex) return;
+
+      // Stop and clear current video
+      active.pause();
+      removeClipListeners(active);
+
+      // If the standby element already has the right clip, use it
+      // Otherwise load fresh into standby
+      const targetClip = sequence[index];
+      const standbyReady =
+        standby.dataset.clipIndex === String(index) &&
+        standby.readyState >= 3; // HAVE_FUTURE_DATA
+
+      const doTransition = () => {
+        currentIndex = index;
+        swapVideoEls();
+        play(active);
+        addClipListeners(active);
+        updateDots();
+
+        // Preload the next one
+        const nextIndex = index + 1 < sequence.length ? index + 1 : (loop ? 0 : null);
+        if (nextIndex !== null) {
+          setTimeout(() => preload(standby, sequence[nextIndex]), fadeDur);
+        }
+      };
+
+      if (standbyReady) {
+        doTransition();
+      } else {
+        showLoadingBar();
+        loadInto(standby, targetClip, false).then(() => {
+          hideLoadingBar();
+          doTransition();
+        });
+      }
+    }
+
+    /**
+     * Crossfade from the current clip to the next one.
+     */
+    function transitionTo(nextIndex) {
+      const nextClip = sequence[nextIndex];
+      removeClipListeners(active);
+
+      const doSwap = () => {
+        currentIndex = nextIndex;
+        swapVideoEls();
+
+        // Reset position and play
+        active.currentTime = 0;
+        play(active);
+        addClipListeners(active);
+        updateDots();
+
+        // Start preloading the one after next
+        const afterNext = nextIndex + 1 < sequence.length ?
+          nextIndex + 1 :
+          (loop ? 0 : null);
+
+        if (afterNext !== null) {
+          setTimeout(() => preload(standby, sequence[afterNext]), fadeDur);
+        }
+      };
+
+      // Check if standby is ready
+      const standbyClipReady =
+        standby.dataset.clipIndex === String(nextIndex) &&
+        standby.readyState >= 3;
+
+      if (standbyClipReady) {
+        doSwap();
+      } else {
+        // Show loading bar while we wait for the next clip
+        showLoadingBar();
+        loadInto(standby, nextClip, false).then(() => {
+          hideLoadingBar();
+          doSwap();
+        });
+      }
+    }
+
+    /**
+     * Swap active ↔ standby references and apply CSS classes.
+     */
+    function swapVideoEls() {
+      // Cross-fade: active fades out, standby fades in
+      active.classList.remove('active');
+      active.classList.add('fading');
+      standby.classList.add('active');
+      standby.classList.remove('fading');
+
+      // After transition, fully hide the old active
+      const outgoing = active;
+      setTimeout(() => {
+        outgoing.classList.remove('fading');
+        outgoing.pause();
+      }, fadeDur);
+
+      // Swap references
+      [active, standby] = [standby, active];
+    }
+
+    /**
+     * Set the src of a video element and wait until it can play.
+     * Returns a promise.
+     */
+    function loadInto(videoEl, clip, isFirst) {
+      return new Promise((resolve) => {
+        const src = baseURL + clip.file;
+
+        // If it's already loaded with this src, resolve immediately
+        if (videoEl.dataset.src === src && videoEl.readyState >= 3) {
+          resolve();
+          return;
+        }
+
+        videoEl.src = src;
+        videoEl.dataset.src = src;
+        videoEl.dataset.clipIndex = String(sequence.indexOf(clip));
+        videoEl.load();
+
+        // Show progress on loading bar for first clip
+        if (isFirst) {
+          videoEl.addEventListener('progress', onProgress, { passive: true });
+        }
+
+        videoEl.addEventListener('canplaythrough', () => {
+          if (isFirst) videoEl.removeEventListener('progress', onProgress);
+          resolve();
+        }, { once: true });
+
+        // Fallback: if canplaythrough never fires, resolve on canplay
+        videoEl.addEventListener('canplay', () => {
+          if (isFirst) videoEl.removeEventListener('progress', onProgress);
+          resolve();
+        }, { once: true });
+
+        // Error fallback
+        videoEl.addEventListener('error', () => {
+          console.warn('[Splash] Failed to load clip:', src);
+          resolve(); // resolve anyway so the sequence doesn't stall
+        }, { once: true });
+      });
+    }
+
+    /**
+     * Silently preload a clip into the standby video element.
+     */
+    function preload(videoEl, clip) {
+      const src = baseURL + clip.file;
+      if (videoEl.dataset.src === src) return; // already loaded
+      videoEl.src = src;
+      videoEl.dataset.src = src;
+      videoEl.dataset.clipIndex = String(sequence.indexOf(clip));
+      videoEl.preload = 'auto';
+      videoEl.load();
+    }
+
+    /**
+     * Play a video (handles the promise returned by .play() in modern browsers).
+     */
+    function play(videoEl) {
+      videoEl.classList.add('active');
+      const p = videoEl.play();
+      if (p) p.catch(err => console.warn('[Splash] play() blocked:', err));
+    }
+
+    /* ── Loading bar helpers ── */
+    function onProgress() {
+      if (!active.duration) return;
+      try {
+        const buf = active.buffered;
+        if (buf.length) {
+          const pct = (buf.end(buf.length - 1) / active.duration) * 100;
+          loadFill.style.width = Math.min(pct, 100) + '%';
+        }
+      } catch (_) {}
+    }
+
+    function showLoadingBar() {
+      loadBar.classList.remove('hidden');
+      loadFill.style.width = '0%';
+    }
+
+    function hideLoadingBar() {
+      loadFill.style.width = '100%';
+      setTimeout(() => loadBar.classList.add('hidden'), 400);
+    }
+
+    /* ── Dot state ── */
+    function updateDots() {
+      dotEls.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+      
+      // Update Tag
+      if (splashTag && sequence[currentIndex]) {
+        // Only apply fade transition if splash is already fully visible
+        const isInitialLoad = splashTag.textContent === "";
+        if (!isInitialLoad) splashTag.style.opacity = '0';
+        
+        setTimeout(() => {
+          splashTag.textContent = sequence[currentIndex].tag || '';
+          if (!isInitialLoad) splashTag.style.opacity = '1';
+        }, isInitialLoad ? 0 : 250);
+      }
+    }
+
+    /* ── Hide splash and scroll to main content ── */
+    function hideSplash(animate = true) {
+      if (!isSplashVisible) return; // Prevent multiple calls
+      isSplashVisible = false;
+
+      const landingLogo = document.querySelector('.landing-logo');
+
+      if (animate) {
+        splashEl.style.transition = 'transform 1s ease-in-out';
+        splashEl.style.transform = 'translateY(-100%)';
+        splashEl.classList.add('slide-out');
+        setTimeout(() => {
+          splashEl.style.display = 'none';
+          // Keep body overflow hidden — the page layout is locked by design;
+          // only the sidebar scrolls internally.
+          document.body.style.overflow = 'hidden';
+          if (landingLogo) landingLogo.style.display = 'block';
+        }, 1000); // Match CSS transition duration
+      } else {
+        splashEl.style.display = 'none';
+        document.body.style.overflow = 'hidden';
+        if (landingLogo) landingLogo.style.display = 'block';
+      }
+    }
+
+  })(); // End of integrated splash.js logic
 });

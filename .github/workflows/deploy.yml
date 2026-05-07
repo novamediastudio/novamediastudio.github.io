@@ -33,7 +33,7 @@ jobs:
           chmod 600 ~/.ssh/font_key
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           GIT_SSH_COMMAND="ssh -i ~/.ssh/font_key" \
-            git clone git@github.com:YOUR_USERNAME/nova-fonts.git /tmp/nova-fonts
+            git clone git@github.com:novamediastudio/nova-fonts.git /tmp/nova-fonts
           cp -r /tmp/nova-fonts/font ./font
 
       - name: Upload site to GitHub Pages
