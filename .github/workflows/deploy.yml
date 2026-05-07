@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+
+      - name: Fetch fonts from private repo
+        env:
+          FONT_DEPLOY_KEY: ${{ secrets.FONT_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$FONT_DEPLOY_KEY" > ~/.ssh/font_key
+          chmod 600 ~/.ssh/font_key
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/font_key" \
+            git clone git@github.com:YOUR_USERNAME/nova-fonts.git /tmp/nova-fonts
+          cp -r /tmp/nova-fonts/font ./font
+
+      - name: Upload site to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
