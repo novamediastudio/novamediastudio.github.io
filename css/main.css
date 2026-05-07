@@ -190,7 +190,7 @@ video {
 /* Desktop nav links — sized to their text, right-aligned */
 .header .header-nav {
   text-align: right;
-  padding-left: 10.6vw;
+  padding-left: 5vw;
 }
 
 /* Mobile nav row */
@@ -257,14 +257,13 @@ video {
   flex-direction: column;
   justify-content: flex-end;
   width: 50%;
-  height: 94vh;
+  height: 92vh;
   z-index: 4;
   overflow-y: hidden;
   overflow-x: hidden;
   mix-blend-mode: difference;
   font-weight: 400;
-  padding-bottom: 1%;
-  
+  padding-bottom: 0%;
 }
 
 .sidebar-item {
@@ -410,10 +409,23 @@ video {
   opacity: 1;
 }
 
+/* Bottom fade — sits above the image but below all page UI (gallery is z-index -1) */
+#image-gallery::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30vh;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .gallery-project-tag {
-  position: fixed;
+  position: absolute;
   bottom: 4vh;
-  left: 65vw;
+  left: 66vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -434,11 +446,11 @@ video {
 }
 
 .gallery-tag-title {
+  position: relative;
   font-size: var(--font-size-body);
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--off-white);
   transition: color 0.2s ease;
   min-height: 1em; /* keeps height stable while typing */
 }

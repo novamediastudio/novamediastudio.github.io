@@ -1,5 +1,5 @@
 [
-     {
+    {
         "id": "fortjesus",
         "title": "Sincronia",
         "type": "A/V Installation",
@@ -11,41 +11,41 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_7.jpg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_7.webp"
             }
         ],
         "media": [
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_1.jpg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_1.webp"
             },
-            {            
+            {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_2.jpg",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_2.webp",
                 "credits": "Picture by Isabella Indolfi",
                 "link": "https://www.isabellaindolfi.it/"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_3.jpeg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_3.webp"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_5.jpeg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_5.webp"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_6.jpeg",
+                "src": "images/2026_fortjesus/novamedia_fortjesus_6.webp",
                 "credits": "Picture by Isabella Indolfi",
                 "link": "https://www.isabellaindolfi.it/"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_8.jpg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_8.webp"
             },
             {
                 "type": "image",
-                "src": "images/2026_fortjesus/novamedia_fortjesus_4.jpeg"
+                "src": "images/2026_fortjesus/novamedia_fortjesus_4.webp"
             }
         ]
     },
@@ -69,17 +69,17 @@
         ],
         "media": [
             {
-               "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_1.jpg"
+                "type": "image",
+                "src": "images/2026_ogr/novamedia_ogr_1.webp"
             },
             {
                 "type": "video",
                 "src": "images/2026_ogr/novamedia_ogr_2.mp4",
                 "controls": false
             },
-            {            
+            {
                 "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_3.jpg",
+                "src": "images/2026_ogr/novamedia_ogr_3.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
@@ -90,7 +90,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_5.jpg",
+                "src": "images/2026_ogr/novamedia_ogr_5.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
@@ -106,7 +106,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_8.jpg",
+                "src": "images/2026_ogr/novamedia_ogr_8.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
@@ -117,13 +117,13 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_10.jpg",
+                "src": "images/2026_ogr/novamedia_ogr_10.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2026_ogr/novamedia_ogr_11.jpg",
+                "src": "images/2026_ogr/novamedia_ogr_11.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
@@ -132,7 +132,6 @@
                 "src": "images/2026_ogr/novamedia_ogr_12.mp4",
                 "controls": false
             }
-            
         ]
     },
     {
@@ -147,13 +146,13 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.JPG"
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_4.webp"
             }
         ],
         "media": [
             {
                 "type": "image",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_1.JPG"
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_1.webp"
             },
             {
                 "type": "video",
@@ -162,7 +161,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_2.JPG"
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_2.webp"
             },
             {
                 "type": "video",
@@ -171,7 +170,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_torinocreativa/novamedia_torinocreativa_3.JPG"
+                "src": "images/2026_torinocreativa/novamedia_torinocreativa_3.webp"
             },
             {
                 "type": "video",
@@ -197,17 +196,17 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_artico/novamedia_artico_1.jpeg"
+                "src": "images/2026_artico/novamedia_artico_1.webp"
             }
         ],
         "media": [
             {
                 "type": "image",
-                "src": "images/2026_artico/novamedia_artico_9.JPEG"
+                "src": "images/2026_artico/novamedia_artico_9.webp"
             },
             {
                 "type": "image",
-                "src": "images/2026_artico/novamedia_artico_3.jpg"
+                "src": "images/2026_artico/novamedia_artico_3.webp"
             },
             {
                 "type": "video",
@@ -221,15 +220,15 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_artico/novamedia_artico_5.jpg"
+                "src": "images/2026_artico/novamedia_artico_5.webp"
             },
             {
                 "type": "image",
-                "src": "images/2026_artico/novamedia_artico_7.JPEG"
+                "src": "images/2026_artico/novamedia_artico_7.webp"
             },
             {
                 "type": "image",
-                "src": "images/2026_artico/novamedia_artico_11.jpg"
+                "src": "images/2026_artico/novamedia_artico_11.webp"
             },
             {
                 "type": "video",
@@ -255,7 +254,7 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+                "src": "images/2026_angelino/novamedia_angelino_2.webp"
             }
         ],
         "media": [
@@ -267,7 +266,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_1.jpg"
+                "src": "images/2026_angelino/novamedia_angelino_1.webp"
             },
             {
                 "type": "video",
@@ -283,7 +282,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2026_angelino/novamedia_angelino_2.jpg"
+                "src": "images/2026_angelino/novamedia_angelino_2.webp"
             }
         ]
     },
@@ -306,7 +305,7 @@
         "media": [
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_1.jpg"
+                "src": "images/2025_workshop/novamedia_workshop_1.webp"
             },
             {
                 "type": "video",
@@ -314,15 +313,15 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_3.jpg"
+                "src": "images/2025_workshop/novamedia_workshop_3.webp"
             },
             {
                 "type": "video",
-                "src": "images/2025_workshop/novamedia_workshop_4.mp4"            
-            },              
+                "src": "images/2025_workshop/novamedia_workshop_4.mp4"
+            },
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_5.jpg"
+                "src": "images/2025_workshop/novamedia_workshop_5.webp"
             },
             {
                 "type": "video",
@@ -330,7 +329,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_7.jpg"
+                "src": "images/2025_workshop/novamedia_workshop_7.webp"
             },
             {
                 "type": "video",
@@ -338,15 +337,15 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_9.jpg"
-            },            
+                "src": "images/2025_workshop/novamedia_workshop_9.webp"
+            },
             {
                 "type": "video",
                 "src": "images/2025_workshop/novamedia_workshop_10.mp4"
             },
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_11.jpg"
+                "src": "images/2025_workshop/novamedia_workshop_11.webp"
             },
             {
                 "type": "video",
@@ -354,7 +353,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_workshop/novamedia_workshop_13.jpg"
+                "src": "images/2025_workshop/novamedia_workshop_13.webp"
             },
             {
                 "type": "video",
@@ -374,7 +373,7 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2025_c2c/novamedia_main_isuc.jpg",
+                "src": "images/2025_c2c/novamedia_main_isuc.webp",
                 "credits": "Picture by Piera Masala",
                 "link": "https://www.instagram.com/pieramasala_/"
             }
@@ -390,13 +389,13 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_c2c/novamedia_isucpes_3.JPG",
+                "src": "images/2025_c2c/novamedia_isucpes_3.webp",
                 "credits": "Picture by Piera Masala",
                 "link": "https://www.instagram.com/pieramasala_/"
-            },            
+            },
             {
                 "type": "image",
-                "src": "images/2025_c2c/novamedia_isucpes_4.JPG",
+                "src": "images/2025_c2c/novamedia_isucpes_4.webp",
                 "credits": "Picture by Piera Masala",
                 "link": "https://www.instagram.com/pieramasala_/"
             },
@@ -426,13 +425,13 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2025_gioevan/novamedia_gioevan_3.jpg"
+                "src": "images/2025_gioevan/novamedia_gioevan_3.webp"
             }
         ],
         "media": [
             {
                 "type": "image",
-                "src": "images/2025_gioevan/novamedia_gioevan_1.jpg"
+                "src": "images/2025_gioevan/novamedia_gioevan_1.webp"
             },
             {
                 "type": "video",
@@ -440,8 +439,8 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_gioevan/novamedia_gioevan_3.jpg"
-            },            
+                "src": "images/2025_gioevan/novamedia_gioevan_3.webp"
+            },
             {
                 "type": "video",
                 "src": "images/2025_gioevan/novamedia_gioevan_4.mp4"
@@ -452,7 +451,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_gioevan/novamedia_gioevan_6.png"
+                "src": "images/2025_gioevan/novamedia_gioevan_6.webp"
             },
             {
                 "type": "video",
@@ -464,7 +463,7 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_gioevan/novamedia_gioevan_9.jpg"
+                "src": "images/2025_gioevan/novamedia_gioevan_9.webp"
             }
         ]
     },
@@ -487,36 +486,35 @@
         "media": [
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_1.jpg"
+                "src": "images/2025_tempoorganico/novamedia_seminaria_1.webp"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_2.jpg",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_2.webp",
                 "credits": "Photo by Gabriele Drago",
                 "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_3.jpg",
-                "credits": "Photo by Gabriele Drago",
-                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
-                
-            },
-            {
-                "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_4.jpg",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_3.webp",
                 "credits": "Photo by Gabriele Drago",
                 "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_5.jpg",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_4.webp",
                 "credits": "Photo by Gabriele Drago",
                 "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
             {
                 "type": "image",
-                "src": "images/2025_tempoorganico/novamedia_seminaria_6.jpg",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_5.webp",
+                "credits": "Photo by Gabriele Drago",
+                "link": "https://www.instagram.com/gabrieledrago.jpeg/"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_tempoorganico/novamedia_seminaria_6.webp",
                 "credits": "Photo by Gabriele Drago",
                 "link": "https://www.instagram.com/gabrieledrago.jpeg/"
             },
@@ -540,13 +538,13 @@
         "mainMedia": [
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_1.jpg"
+                "src": "images/2025_gam/novamedia_gam_1.webp"
             }
         ],
         "media": [
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_4.jpg"
+                "src": "images/2025_gam/novamedia_gam_4.webp"
             },
             {
                 "type": "video",
@@ -555,19 +553,19 @@
             },
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_2.jpg"
+                "src": "images/2025_gam/novamedia_gam_2.webp"
             },
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_1.jpg"
+                "src": "images/2025_gam/novamedia_gam_1.webp"
             },
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_3.jpg"
+                "src": "images/2025_gam/novamedia_gam_3.webp"
             },
             {
                 "type": "image",
-                "src": "images/2025_gam/novamedia_gam_7.jpg"
+                "src": "images/2025_gam/novamedia_gam_7.webp"
             }
         ]
     },
@@ -588,28 +586,28 @@
                 "link": "https://www.instagram.com/dentrooallascatola/"
             }
         ],
-        "media": [            
+        "media": [
             {
                 "type": "image",
-                "src": "images/2024_venaria/novamedia_venaria_1.jpg",
+                "src": "images/2024_venaria/novamedia_venaria_1.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_venaria/novamedia_venaria_2.jpg",
+                "src": "images/2024_venaria/novamedia_venaria_2.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_venaria/novamedia_venaria_3.jpg",
+                "src": "images/2024_venaria/novamedia_venaria_3.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_venaria/novamedia_venaria_4.jpg",
+                "src": "images/2024_venaria/novamedia_venaria_4.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             }
@@ -636,37 +634,37 @@
         "media": [
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr24_1.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_1.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr24_2.jpg",
-                "credits": "Picture by Simone Coppola",
-                "link": "https://www.instagram.com/dentrooallascatola/"
-            },
-            {            
-                "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr24_3.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_2.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr24_4.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_3.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr24_5.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_4.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             },
             {
                 "type": "image",
-                "src": "images/2024_ogr/novamedia_ogr24_6.jpg",
+                "src": "images/2024_ogr/novamedia_ogr24_5.webp",
+                "credits": "Picture by Simone Coppola",
+                "link": "https://www.instagram.com/dentrooallascatola/"
+            },
+            {
+                "type": "image",
+                "src": "images/2024_ogr/novamedia_ogr24_6.webp",
                 "credits": "Picture by Simone Coppola",
                 "link": "https://www.instagram.com/dentrooallascatola/"
             }
