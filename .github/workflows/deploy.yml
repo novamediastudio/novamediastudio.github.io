@@ -24,17 +24,15 @@ jobs:
       - name: Checkout public repo
         uses: actions/checkout@v4
 
-      - name: Fetch fonts from private repo
-        env:
-          FONT_DEPLOY_KEY: ${{ secrets.FONT_DEPLOY_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          echo "$FONT_DEPLOY_KEY" | base64 --decode > ~/.ssh/font_key
-          chmod 600 ~/.ssh/font_key
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          GIT_SSH_COMMAND="ssh -i ~/.ssh/font_key" \
-            git clone git@github.com:novamediastudio/nova-fonts.git /tmp/nova-fonts
-          cp -r /tmp/nova-fonts/font ./font
+      - name: Checkout fonts from private repo
+        uses: actions/checkout@v4
+        with:
+          repository: novamediastudio/nova-fonts
+          ssh-key: ${{ secrets.FONT_DEPLOY_KEY }}
+          path: nova-fonts
+
+      - name: Move fonts into site
+        run: cp -r nova-fonts/font ./font
 
       - name: Upload site to GitHub Pages
         uses: actions/upload-pages-artifact@v3
