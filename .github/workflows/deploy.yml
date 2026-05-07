@@ -29,7 +29,7 @@ jobs:
           FONT_DEPLOY_KEY: ${{ secrets.FONT_DEPLOY_KEY }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "$FONT_DEPLOY_KEY" > ~/.ssh/font_key
+          echo "$FONT_DEPLOY_KEY" | base64 --decode > ~/.ssh/font_key
           chmod 600 ~/.ssh/font_key
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           GIT_SSH_COMMAND="ssh -i ~/.ssh/font_key" \
