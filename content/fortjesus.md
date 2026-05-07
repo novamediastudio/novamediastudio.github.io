@@ -12,5 +12,5 @@ Curated by Isabella Indolfi, the project continues a line of site-specific resea
 ## Credits
 Visuals and Sound | Nova Media Studio <br>
 Artistic Curator | <a href="https://www.isabellaindolfi.it/" target="_blank" style="text-decoration: underline;">Isabella Indolfi</a> <br>
-Music Advisor| <a href="https://www.instagram.com/jumatutu/" target="_blank" style="text-decoration: underline;">Juma Tutu</a>
-Technical Support | Jay Pyrotechnics
+Music Advisor| <a href="https://www.instagram.com/jumatutu/" target="_blank" style="text-decoration: underline;">Juma Tutu</a> <br>
+Technical Support | <a href="Jay pyrotecnics" target="_blank" style="text-decoration: underline;">Jay Pyrotechnics </a>
