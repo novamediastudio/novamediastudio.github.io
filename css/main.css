@@ -1618,10 +1618,6 @@ body.work-page::after {
     font-size: 1.4vh;
   }
 
-  .custom-cursor {
-    display: none; 
-  } 
-  
   /* Landing Page Mobile */
   .landing-logo {
     width: auto;
@@ -1659,5 +1655,18 @@ body.work-page::after {
 
   .gallery-project-tag {
     display: none; 
+  }
+}
+/* Hide custom cursor and restore native cursor on touch devices only.
+   Uses pointer: coarse so a small desktop window never triggers this. */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+
+  body,
+  a,
+  * {
+    cursor: auto !important;
   }
 }
