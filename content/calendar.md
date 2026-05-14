@@ -6,7 +6,7 @@
 2025/10/31 Live Visual per Iosonouncane / Daniela Pes – Club2Club, Turin (IT) 
 2025/10/28 • 2025/12/13, Visuals per Gio Evan Gio Evan – L'Affine del Mondo Italian Tour
 2025/10/11 Installation Beyond the Portal for Barriera Design District -  Magazzini Tessili, Turin (IT)
-2025/08/28 • 2025/08/30, Biennale Seminaria Sogninterra, Maranola, Formia (LT), Italy
+2025/08/28 • 2025/08/30, Biennale Seminaria Sogninterra, Maranola, Formia (IT)
 2025/05/23, Live Visual performance at GAM - Galleria d'Arte Moderna – Turin (IT)
 2025/05/10, Live Visual performance at Barolo Castle – Barolo (IT)
 2025/02/23, Live Visual performance at Fabrique - Milano (IT)
@@ -21,6 +21,11 @@
 
 Workshops 
 
-2026/05/13 • 2026/05/17 Projection Mapping Workshop at Recontemporary – Turin (IT)
+2026/12 Projection Mapping Workshop (TBA)
+2026/09 Projection Mapping Workshop (TBA)
 2025/12/06 • 2025/12/08 Projection Mapping Workshop at Recontemporary – Turin (IT)
 2025/05/10 • 2025/05/11 Projection Mapping Workshop at Recontemporary – Turin (IT)
+
+Courses
+
+2027 IED Turin (TBA)
