@@ -669,5 +669,45 @@
                 "link": "https://www.instagram.com/dentrooallascatola/"
             }
         ]
+    },
+    {
+        "id": "thereisnotenoughtime",
+        "title": "There is not enough time",
+        "type": "A/V Piece",
+        "year": "2025",
+        "contentFile": "content/thereisnotenoughtime.md",
+        "mainMedia": [
+            {
+                "type": "google-drive-video",
+                "src": "https://drive.google.com/file/d/1z9SrJttsLfdlZ7X4rhbGgzF5yguM-dEW/preview"
+            }
+        ],
+        "media": [
+            {   
+                "type": "image",
+                "src": "images/2025_thereisnotenoughtime/frame_1.webp"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_thereisnotenoughtime/frame_2.webp"
+            },
+            {
+                "type": "video",
+                "src": "images/2025_thereisnotenoughtime/007.mp4"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_thereisnotenoughtime/frame_3.webp"
+            },
+            {
+                "type": "image",
+                "src": "images/2025_thereisnotenoughtime/frame_4.webp"
+            },
+                        {
+                "type": "image",
+                "src": "images/2025_thereisnotenoughtime/map.png"
+            }
+            
+        ]
     }
 ]
