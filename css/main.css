@@ -1389,10 +1389,10 @@ body.work-page::after {
   }
 
   .sidebar {
-    padding-top: 60.5vh;
+    padding-top: 8vh;
     width: 100%;
-    height: auto;
-    overflow: visible;
+    height: calc(100svh - 8vh);
+    overflow-y: auto;
   }
 
   #image-gallery {
