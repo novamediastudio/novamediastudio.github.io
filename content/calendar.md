@@ -21,8 +21,8 @@
 
 Workshops 
 
-2026/12 Projection Mapping Workshop (TBA)
-2026/09 Projection Mapping Workshop (TBA)
+2026/12 Projection Mapping Workshop at Recontemporary – Turin (IT)
+2026/09 TouchDesigner Workshop at Baumhaus – Bologna (IT)
 2025/12/06 • 2025/12/08 Projection Mapping Workshop at Recontemporary – Turin (IT)
 2025/05/10 • 2025/05/11 Projection Mapping Workshop at Recontemporary – Turin (IT)
 
