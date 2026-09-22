@@ -1,0 +1,20 @@
+{
+  "title": "Nova Media — Plugins",
+  "sections": [
+    {
+      "title": "Getting Started",
+      "pages": [
+        { "slug": "overview",     "title": "Overview",     "file": "content/plugins/overview.md" },
+        { "slug": "requirements", "title": "Requirements", "file": "content/plugins/requirements.md" },
+        { "slug": "installation", "title": "Installation",  "file": "content/plugins/installation.md" },
+        { "slug": "license",      "title": "License",       "file": "content/plugins/license.md" }
+      ]
+    },
+    {
+      "title": "Plugins",
+      "pages": [
+        { "slug": "autoframe", "title": "Auto Frame", "tag": "Virtual PTZ", "file": "content/plugins/autoframe.md" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/novamedia_icon.gif">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <title>NOVA | Plugins</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body class="docs-page" style="overflow-y: auto;">
+
+    <div class="desktop">
+        <div class="header">
+            <div class="column title">
+                <a href="index.html?splash=false">
+                    <img src="images/novamedia_logo.webp" alt="nova icon" class="header-logo">
+                </a>
+            </div>
+            <div class="row header-tags"></div>
+            <div class="row header-nav">
+                <a href="index.html?splash=false">HOME</a>
+            </div>
+            <div class="row header-nav">
+                <a href="about.html">ABOUT</a>
+            </div>
+            <div class="row header-nav">
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="header">
+            <div class="column title">
+                <a href="index.html?splash=false">
+                    <img src="images/novamedia_logo.webp" alt="nova icon" class="header-logo">
+                </a>
+            </div>
+            <div class="row header-nav-mobile">
+                <a href="index.html?splash=false">HOME </a>
+                <div class="header-nav-spacer"> </div>
+                <a href="about.html">ABOUT </a>
+                <div class="header-nav-spacer"> </div>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plugins / docs layout -->
+    <div class="docs-layout">
+
+        <!-- Left: plugin index -->
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-title">Documentation</div>
+            <nav id="docs-nav"></nav>
+        </aside>
+
+        <!-- Center: rendered markdown page -->
+        <main class="docs-main">
+            <div class="docs-breadcrumb" id="docs-breadcrumb"></div>
+            <article class="docs-content" id="docs-content">Loading…</article>
+        </main>
+
+        <!-- Right: on-this-page -->
+        <aside class="docs-toc">
+            <div class="docs-toc-title">On this page</div>
+            <nav id="docs-toc"></nav>
+        </aside>
+
+    </div>
+
+    <div class="footer">© 2026</div>
+
+    <script src="js/plugins.js"></script>
+</body>
+
+</html>
